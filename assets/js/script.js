@@ -1,9 +1,14 @@
 const img = document.querySelector('#Hero-Banner-Full img');
 
-img.addEventListener('load', () => {
-    console.log("first image loaded");
+if (img.complete) {
+  onImageLoaded();
+} else {
+  img.addEventListener('load', onImageLoaded);
+}
+
+function onImageLoaded() {
   document.querySelector('#loader-animation').style.display = 'none';
-});
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     const header = document.querySelector(".uc-header");

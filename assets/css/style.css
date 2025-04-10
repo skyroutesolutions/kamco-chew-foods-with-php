@@ -215,6 +215,12 @@ footer {
       gap: 80px;
 }
 
+#roadmap #journey-left-section .panel {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+}
+
 #roadmap #journey-left-section>div {
       padding-right: 40px;
 }
@@ -331,7 +337,6 @@ footer {
       position: relative;
       overflow-x: scroll;
       padding: 40px;
-      /* box-shadow: inset 0px 0px 10px 10px #FBE3DF; */
 }
 
 #products-carousal::-webkit-scrollbar {
@@ -350,9 +355,11 @@ footer {
 
 #products-carousal #container img {
       height: 340px;
+      width: 340px;
       object-fit: cover;
       filter: drop-shadow(0px 0px 10px black);
 }
+  
 
 #features #features-container {
       background-color: #F8B852;
@@ -379,6 +386,19 @@ footer {
       background-image: url(../images/bg/about.jpg);
       background-color: transparent;
       background-size: cover;
+}
+
+.global-presence-content h1 {
+      font-family: sergio !important;
+      margin-bottom: 20px;
+      margin-bottom: 50px;
+      color: #228beb;
+      font: italic bold 100px Georgia, Serif;
+      text-shadow: -4px 3px 0 black, -14px 7px 0 white;
+      font-family: Sergio !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 }
 
 #bilgres-font {
@@ -445,6 +465,10 @@ footer {
       padding-right: 20px;
 }
 
+#contact #inputFields {
+      padding-right: 20px;
+}
+
 #contact .focus-icon {
       height: 90%;
       position: absolute;
@@ -456,6 +480,10 @@ footer {
 .footer-cta {
       position: relative;
       z-index: 9;
+}
+
+.about-image{
+      padding: 3.5rem !important;
 }
 
 @keyframes lefttoright {
@@ -641,6 +669,10 @@ footer {
             gap: 30px;
       }
 
+      #roadmap #journey-left-section .panel {
+            align-items: flex-start;
+      }
+
       #roadmap #journey-left-section>div {
             padding-right: 0px;
       }
@@ -672,7 +704,12 @@ footer {
       #certifications .certificates {
             flex-direction: row;
             justify-content: center;
-            align-items: center;
+           
+           
+      }
+
+      #certifications .certificates>div {
+            justify-content: center;
       }
 
       #certifications .certificates img {
@@ -698,6 +735,10 @@ footer {
       #contact {
             margin: 0px 10px;
             margin-bottom: 0px;
+      }
+
+      .about-image{
+            padding: 1rem !important;
       }
 
 }

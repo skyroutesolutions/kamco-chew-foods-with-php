@@ -59,6 +59,7 @@
 }
 
 #modal-section-inner{
+  width: 70vw;
   /* background-image: url(../images/bg/img1.png);
   background-size: cover; */
   position: relative;
@@ -131,13 +132,23 @@
 
   #modal-section-inner{
     height: 80vh;
+    width: 100%;
     overflow-y: auto;
     text-align: center;
+  }
+
+  #modal-section-inner .modal-section-inner-content{
+    padding: 0px !important;
   }
 
   .product-content {
     width: 90%;
     flex-direction: column;
+  }
+
+  .product #product-image {
+    height: 450px;
+    width: 450px;
   }
   
   .product img {

@@ -9,9 +9,11 @@ window.addEventListener("scroll", function () {
     if (currentScroll > lastScrollTop) {
         header.style.transform = "translateY(-100%)";
         header.style.opacity = "0";
+        header.style.display = "none";
     } else {
         header.style.transform = "translateY(0)";
         header.style.opacity = "1";
+        header.style.display = "block";
     }
 
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;

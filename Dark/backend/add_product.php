@@ -3,7 +3,6 @@ include 'db_connection.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $product_name = $_POST['product_name'];
-    $status = $_POST['status'];
     $category_id = $_POST['category_id'];
     $image_path = '';
 
@@ -32,16 +31,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $description = $_POST['product_description'];
 
     // Debugging: Log incoming data
-    error_log("Product Name: $product_name, Status: $status");
+    error_log("Product Name: $product_name");
     
-    if (!empty($product_name) && !empty($status) && !empty($description)) {
+    if (!empty($product_name)  && !empty($description)) {
 
 
-        $stmt =$pdo->prepare("INSERT INTO products (name, status, description, category_id,  image) VALUES (:name, :status, :description, :category_id,  :image_path)");
+        $stmt =$pdo->prepare("INSERT INTO products (name,  description, category_id,  image) VALUES (:name,  :description, :category_id,  :image_path)");
 
 
 
-        $stmt->execute(['name' => $product_name, 'status' => $status, 'description' => $_POST['product_description'], 'category_id' => $category_id,  'image_path' => $image_path]);
+        $stmt->execute(['name' => $product_name,  'description' => $_POST['product_description'], 'category_id' => $category_id,  'image_path' => $image_path]);
 
 
 

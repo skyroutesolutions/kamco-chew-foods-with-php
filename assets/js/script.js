@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const container = document.querySelector("#products-carousal #container");
     let scrollAmount = 0;
-    const scrollStep = 330;
+    const scrollStep = 300;
     const scrollSpeed = 4000;
 
     function autoScroll() {
@@ -50,55 +50,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setInterval(autoScroll, scrollSpeed);
 });
-
-const dropdownToggle = document.querySelector(".dropdown-toggle");
-    const dropdownMenu = document.querySelector(".dropdown-menu");
-
-    dropdownToggle.addEventListener("click", function (e) {
-        e.preventDefault();
-        dropdownMenu.classList.toggle("show");
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener("click", function (e) {
-    if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
-        dropdownMenu.classList.remove("show");
-    }
-});
-
-const catalogueDropdownToggle = document.querySelector(".catalogueDropdown-toggle");
-    const catalogueDropdownMenu = document.querySelector(".catalogueDropdown-menu");
-
-    catalogueDropdownToggle.addEventListener("click", function (e) {
-        e.preventDefault();
-        catalogueDropdownMenu.classList.toggle("show");
-    });
-
-    // Close catalogueDropdown when clicking outside
-    document.addEventListener("click", function (e) {
-    if (!catalogueDropdownToggle.contains(e.target) && !catalogueDropdownMenu.contains(e.target)) {
-        catalogueDropdownMenu.classList.remove("show");
-    }
-});
-
-let isProductMenuPanelDropDownShown = true;
-const productsDropDown = document.querySelector(".menu-panel-products-dropdown");
-const showProductsDropDown = () => {
-    if(isProductMenuPanelDropDownShown) {
-        productsDropDown.style.display = "block";
-    } else{
-        productsDropDown.style.display = "none";
-    }
-    isProductMenuPanelDropDownShown = !isProductMenuPanelDropDownShown
-}
-
-let isCatalogueMenuPanelDropDownShown = true;
-const catalogueDropDown = document.querySelector(".menu-panel-catalogues-dropdown");
-const showCatalogueDropDown = () => {
-    if(isCatalogueMenuPanelDropDownShown) {
-        catalogueDropDown.style.display = "block";
-    } else{
-        catalogueDropDown.style.display = "none";
-    }
-    isCatalogueMenuPanelDropDownShown = !isCatalogueMenuPanelDropDownShown
-}

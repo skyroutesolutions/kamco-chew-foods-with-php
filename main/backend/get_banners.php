@@ -7,7 +7,7 @@ try {
     $stmt->execute();
     $banners = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    $baseUrl = 'http://localhost/kamco/dark/backend/uploads/banners/'; // Update to your actual server path
+    $baseUrl = '../../dark/backend/uploads/banners/'; // Update to your actual server path
 
     // Process images to include full URLs
     foreach ($banners as &$banner) {

@@ -1,10 +1,3 @@
-<?php
-session_start();
-if (!isset($_SESSION['admin_id'])) {
-    header("Location: login.html");
-    exit;
-}
-?>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -58,7 +51,6 @@ if (!isset($_SESSION['admin_id'])) {
                         <tr>
                             <th>ID</th>
                             <th>Category Name</th>
-                            <th>Status</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -85,13 +77,7 @@ if (!isset($_SESSION['admin_id'])) {
                             <input type="text" id="category-name" name="category_name" class="form-control" required>
                         </div>
                       
-                        <div class="form-group">
-                            <label>Status</label>
-                            <select id="status" name="status" class="form-control" required>
-                                <option value="active">Active</option>
-                                <option value="inactive">Inactive</option>
-                            </select>
-                        </div>
+                     
                         <button type="submit" class="btn btn-success">Save</button>
                     </form>
                 </div>
@@ -149,7 +135,6 @@ if (!isset($_SESSION['admin_id'])) {
                     } else {
                         $('#category-id').val(data.id);
                         $('#category-name').val(data.name);
-                        $('#status').val(data.status);
                         $('#categoryModal').modal('show');
                     }
                 }, 'json').fail(function () {

@@ -22,23 +22,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Get the last inserted blog ID
         $blog_id =$pdo->lastInsertId();
 
-        // Handle multiple images
-        if (!empty($_FILES['images']['name'][0])) {
+        // Handle single image upload
+        if (!empty($_FILES['image']['name'])) {
             $targetDir = "uploads/blogs/";
 
             if (!is_dir($targetDir)) {
                 mkdir($targetDir, 0777, true);
             }
 
-            foreach ($_FILES['images']['name'] as $key => $imageName) {
-                $imageTmpName = $_FILES['images']['tmp_name'][$key];
-                $uniqueImageName = time() . "_" . basename($imageName);
-                $targetPath = $targetDir . $uniqueImageName;
+            $imageName = $_FILES['image']['name'];
+            $imageTmpName = $_FILES['image']['tmp_name'];
+            $uniqueImageName = time() . "_" . basename($imageName);
+            $targetPath = $targetDir . $uniqueImageName;
 
-                if (move_uploaded_file($imageTmpName, $targetPath)) {
-                    $stmt =$pdo->prepare("INSERT INTO blog_image (blog_id, image_path) VALUES (?, ?)");
-                    $stmt->execute([$blog_id, $uniqueImageName]);
-                }
+            if (move_uploaded_file($imageTmpName, $targetPath)) {
+                $stmt = $pdo->prepare("UPDATE blogs SET image = ? WHERE id = ?");
+                $stmt->execute([$uniqueImageName, $blog_id]);
             }
         }
 

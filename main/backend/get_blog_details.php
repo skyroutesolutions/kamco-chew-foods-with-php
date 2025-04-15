@@ -1,5 +1,6 @@
 <?php
 header('Content-Type: application/json');
+
 require '../../dark/backend/db_connection.php';
 
 try {
@@ -19,7 +20,7 @@ try {
             $blog['description'] =  $cleanDescription ;// Limit to 200 chars with ellipsis
 
             // Fetch blog images
-            $imgQuery =$pdo->prepare("SELECT image_path FROM blog_image WHERE blog_id = :id");
+            $imgQuery =$pdo->prepare("SELECT image FROM blogs WHERE id = :id");
             $imgQuery->bindParam(':id', $blog['id'], PDO::PARAM_INT);
             $imgQuery->execute();
             $images = $imgQuery->fetchAll(PDO::FETCH_COLUMN);

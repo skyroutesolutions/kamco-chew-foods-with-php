@@ -11,7 +11,7 @@ try {
     if ($blogs) {
         foreach ($blogs as &$blog) {
             // Fetch images for each blog
-            $imgQuery =$pdo->prepare("SELECT image_path FROM blog_image WHERE blog_id = :id LIMIT 1");
+            $imgQuery =$pdo->prepare("SELECT image FROM blogs WHERE id = :id LIMIT 1");
             $imgQuery->bindParam(':id', $blog['id'], PDO::PARAM_INT);
             $imgQuery->execute();
             $image = $imgQuery->fetchColumn();

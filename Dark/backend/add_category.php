@@ -3,12 +3,11 @@ include 'db_connection.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $category_name = $_POST['category_name'];
-    $status = $_POST['status'];
 
 
-    if (!empty($category_name) && !empty($status)) {
-        $stmt =$pdo->prepare("INSERT INTO categories (name, status) VALUES (:name, :status)");
-        $stmt->execute(['name' => $category_name, 'status' => $status]);
+    if (!empty($category_name) ) {
+        $stmt =$pdo->prepare("INSERT INTO categories (name) VALUES (:name)");
+        $stmt->execute(['name' => $category_name]);
 
         echo "Category added successfully!";
     } else {

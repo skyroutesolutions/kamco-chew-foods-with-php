@@ -10,7 +10,7 @@ try {
 
     // Fetch images for each blog
     foreach ($blogs as &$blog) {
-        $imgQuery =$pdo->prepare("SELECT image_path FROM blog_image WHERE blog_id = :id");
+        $imgQuery =$pdo->prepare("SELECT image FROM blogs WHERE id = :id");
         $imgQuery->bindParam(':id', $blog['id'], PDO::PARAM_INT);
         $imgQuery->execute();
         $images = $imgQuery->fetchAll(PDO::FETCH_COLUMN);

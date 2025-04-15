@@ -43,9 +43,14 @@ if (!isset($_SESSION['admin_id'])) {
             <div class="container">
                 <h2 class="text-center mb-4">subscription List</h2>
                 
-                <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#subscriptionModal">
-                    Add subscription
-                </button>
+                <div class="mb-3">
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#subscriptionModal">
+                        <i class="fas fa-plus"></i> Add Subscription
+                    </button>
+                    <a href="backend/export_subscriptions.php" class="btn btn-success">
+                        <i class="fas fa-file-excel"></i> Export to Excel
+                    </a>
+                </div>
 
                 <table class="table table-bordered">
                     <thead>

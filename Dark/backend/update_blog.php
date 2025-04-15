@@ -20,8 +20,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $oldImage = $stmt->fetchColumn();
 
                 // Delete old image
-                if ($oldImage && file_exists("../blogs/" . $oldImage)) {
-                    unlink("../blogs/" . $oldImage);
+                if ($oldImage && file_exists("uploads/blogs/" . $oldImage)) {
+                    unlink("uploads/blogs/" . $oldImage);
                 }
 
                 // Update with new image

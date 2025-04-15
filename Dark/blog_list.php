@@ -75,19 +75,14 @@ if (!isset($_SESSION['admin_id'])) {
                             <input type="text" id="name" name="name" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label>Number of Images</label>
-                            <input type="number" id="image-count" class="form-control" min="1" placeholder="Enter number of images">
-                        </div>
-                        
-                        <div class="form-group" id="image-upload-section" style="display: none;">
-                            <label>Choose Images</label>
-                            <input type="file" id="images" name="images[]" class="form-control" accept="image/*" multiple>
+                            <label>Blog Image</label>
+                            <input type="file" id="image" name="image" class="form-control" accept="image/*">
                         </div>
                         
 
                         <div class="form-group">
                             <label>Description</label>
-                            <textarea id="description" name="description" class="form-control" required></textarea>
+                            <textarea id="description" name="description" class="form-control"></textarea>
                         </div>
                         <button type="submit" class="btn btn-success">Save</button>
                     </form>
@@ -111,44 +106,9 @@ if (!isset($_SESSION['admin_id'])) {
         </div>
     </div>
     
-    <script src="https://cdn.tiny.cloud/1/hyzcg2gd4st7g91ic57xuyp3ta36stslzgkn47watslr8s24/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            tinymce.init({
-                selector: '#description, #overview',
-                plugins: 'lists link image table',
-                toolbar: 'undo redo | bold italic | bullist numlist | link image',
-                setup: function(editor) {
-                    editor.on('change', function() {
-                        tinymce.triggerSave();
-                    });
-                }
-            });
-        });
-
-        $(document).ready(function () {
-            $("#image-count").on("input", function () {
-                var imageCount = parseInt($(this).val());
-                var imageUploadSection = $("#image-upload-section");
-
-                // Reset old inputs
-                imageUploadSection.empty();
-
-                if (imageCount > 0) {
-                    for (var i = 0; i < imageCount; i++) {
-                        var inputField = `<div class="form-group">
-                            <label>Choose Image ${i + 1}</label>
-                            <input type="file" name="images[]" class="form-control" accept="image/*" required>
-                        </div>`;
-                        imageUploadSection.append(inputField);
-                    }
-                    imageUploadSection.show();
-                } else {
-                    imageUploadSection.hide();
-                }
-            });
-        });
+ 
 
         $(document).ready(function () {
             // Load layouts
@@ -169,8 +129,7 @@ if (!isset($_SESSION['admin_id'])) {
             $('#blog-form').submit(function (e) {
                 e.preventDefault();
 
-                // Ensure TinyMCE content is saved
-                tinymce.triggerSave();
+             
 
                 var formData = new FormData(this);
                 var url = $('#blog-id').val() ? 'backend/update_blog.php' : 'backend/add_blog.php';
@@ -203,27 +162,21 @@ if (!isset($_SESSION['admin_id'])) {
                         $('#blog-id').val(data.id);
                         $('#name').val(data.name);
                         $('#duration').val(data.duration);
-                        $('#published_date').val(data.published_date);
-                        $('#author').val(data.author);
-                        tinymce.get('description').setContent(data.description);
-                        tinymce.get('overview').setContent(data.overview);
+                       
+                      
 
-                        // **Set image count**
-                        $('#image-count').val(data.images.length);
 
-                        // **Show images preview**
+                        // **Show image preview**
                         var imagePreview = "";
-                        if (Array.isArray(data.images) && data.images.length > 0) {
-                            data.images.forEach((img, index) => {
-                                imagePreview += `
-                                    <div class="form-group">
-                                        <label>Current Image ${index + 1}</label>
-                                        <img src='backend/uploads/blogs/${img}' width='80' style='margin:5px; border-radius:5px; display:block;'>
-                                        <input type="hidden" name="existing_images[]" value="${img}">
-                                    </div>`;
-                            });
+                        if (data.image) {
+                            imagePreview = `
+                                <div class="form-group">
+                                    <label>Current Image</label>
+                                    <img src='backend/uploads/blogs/${data.image}' width='80' style='margin:5px; border-radius:5px; display:block;'>
+                                    <input type="hidden" name="existing_image" value="${data.image}">
+                                </div>`;
                         } else {
-                            imagePreview = '<p>No images uploaded</p>';
+                            imagePreview = '<p>No image uploaded</p>';
                         }
 
                         $('#image-upload-section').html(imagePreview).show();

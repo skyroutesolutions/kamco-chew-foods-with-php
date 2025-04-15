@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
             // Prepend 'backend/' to image URL if image is not empty
             if (!empty($product['image'])) {
-                $product['image'] = '../dark/backend/' . $product['image'];
+                $product['image'] = '../../dark/backend/' . $product['image'];
             }
 
             echo json_encode($product);
@@ -31,3 +31,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 } else {
     echo "Invalid request method.";
 }
+
+

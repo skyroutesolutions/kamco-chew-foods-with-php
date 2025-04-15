@@ -61,7 +61,6 @@ if (!isset($_SESSION['admin_id'])) {
                             <th>Description</th>
                             <th>Category</th>
 
-                            <th>Status</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -98,13 +97,7 @@ if (!isset($_SESSION['admin_id'])) {
                                 <!-- Categories will be populated here -->
                             </select>
                         </div>
-                        <div class="form-group">
-                            <label>Status</label>
-                            <select id="status" name="status" class="form-control" required>
-                                <option value="active">Active</option>
-                                <option value="inactive">Inactive</option>
-                            </select>
-                        </div>
+                    
                         <div class="form-group">
                             <label>Product Image</label>
                             <input type="file" id="product-image" name="product_image" class="form-control" accept="image/*">
@@ -115,21 +108,10 @@ if (!isset($_SESSION['admin_id'])) {
             </div>
         </div>
     </div>
-    <script src="https://cdn.tiny.cloud/1/hyzcg2gd4st7g91ic57xuyp3ta36stslzgkn47watslr8s24/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+<!-- Place the first <script> tag in your HTML's <head> -->
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            tinymce.init({
-                selector: '#product-description', // Update to match the correct input field ID
-                plugins: 'lists link image table',
-                toolbar: 'undo redo | bold italic | bullist numlist | link image',
-                setup: function(editor) {
-                    editor.on('change', function() {
-                        tinymce.triggerSave();
-                    });
-                }
-            });
-        });
+
+<script>
 
         $(document).ready(function () {
             // Load layouts
@@ -192,7 +174,6 @@ if (!isset($_SESSION['admin_id'])) {
                         $('#product-id').val(data.id);
                         $('#product-name').val(data.name);
                         $('#product-description').val(data.description);
-                        $('#status').val(data.status);
                         $('#category-select').val(data.category_id); // Set selected category
                         $('#productModal').modal('show');
                     }

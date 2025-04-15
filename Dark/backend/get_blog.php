@@ -15,14 +15,8 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
         $blog = $query->fetch(PDO::FETCH_ASSOC);
 
         if ($blog) {
-            // Fetch images related to this blog from blog_image table
-            $imgQuery =$pdo->prepare("SELECT image_path FROM blog_image WHERE blog_id = :id");
-            $imgQuery->bindParam(':id', $id, PDO::PARAM_INT);
-            $imgQuery->execute();
-            $images = $imgQuery->fetchAll(PDO::FETCH_COLUMN);
-
-            // Add images to the blog response
-            $blog['images'] = $images;
+        // Add image to the blog response
+        $blog['image'] = $blog['image'];
             $response = $blog;
         } else {
             $response = ["error" => "Blog not found"];

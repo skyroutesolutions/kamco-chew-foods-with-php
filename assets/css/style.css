@@ -130,6 +130,7 @@ footer {
       /* background-size: cover; */
       height: 100vh;
       background-image: url(../images/bg/Kamco_Landscape\ Background.jpg);
+      overflow-x: hidden;
 }
 
 #Hero-Banner-Full video {
@@ -140,11 +141,18 @@ footer {
       height: 100%;
 }
 
-#Hero-Banner-Full img {
+/* #Hero-Banner-Full img {
       height: 100vh;
       position: absolute;
       right: 0;
 
+} */
+
+#Hero-Banner-Full iframe {
+      height: 100vh;
+      width: 100vw;
+      position: absolute;
+      right: 0px;
 }
 
 #Hero-Banner-Full h1 {
@@ -603,12 +611,22 @@ footer {
             height: 100vh;
       } */
 
-      #Hero-Banner-Full img {
+      /* #Hero-Banner-Full img {
             height: 40vh;
             position: absolute;
             right: 0;
             top: 2%;
-      }
+      } */
+
+            #Hero-Banner-Full iframe {
+                  height: 40vh;
+                  width: 100vw;
+                  position: absolute;
+                  right: 0;
+                  top: 2%;
+            }
+            
+
 
       #Hero-Banner-Full h1 {
             position: absolute;

@@ -85,6 +85,7 @@
                   display: flex;
                   justify-content: center;
                   align-items: center;
+                  display: none;
             }
             #loader-animation img{
                   height: 160px;
@@ -113,8 +114,8 @@
                   <div class="vstack">
                         <h2 class="h5 ft-primary fw-bold -ls-1 m-0 text-dark">GDPR Compliance</h2>
                         <p class="fs-6 mt-1">We use cookies to ensure you get the best experience on our website. By
-                              continuing to use our site, you accept our use of cookies, <a href="page-privacy.html"
-                                    class="uc-link text-underline">privacy policy</a> and <a href="page-terms.html"
+                              continuing to use our site, you accept our use of cookies, <a href="page-privacy"
+                                    class="uc-link text-underline">privacy policy</a> and <a href="page-terms"
                                     class="uc-link text-underline">terms of service</a>.</p>
                   </div>
                   <button class="btn btn-sm btn-primary px-2" id="uc-accept-gdpr">Accept</button>
@@ -127,7 +128,7 @@
                   class="uc-offcanvas-bar m-1 rounded-2 border border-2 border-black contrast-shadow-md text-dark dark:bg-gray-900 dark:text-white">
                   <header class="uc-offcanvas-header hstack justify-between items-center pb-2">
                         <div class="uc-logo">
-                              <a href="index.html" class="h5 text-none text-gray-900 dark:text-white">
+                              <a href="index" class="h5 text-none text-gray-900 dark:text-white">
                                     <img class="w-50px" src="./assets/images/kamco-logo-version1.svg"
                                           alt="Kamco Chew Foods">
                               </a>
@@ -143,8 +144,8 @@
 
                   <div class="panel">
                         <ul class="nav-y gap-narrow fw-medium fs-6" data-uc-nav>
-                            <li><a href="/index.html">Home</a></li>
-                            <li><a href="/main/about.html">About us</a></li>
+                            <li><a href="/index">Home</a></li>
+                            <li><a href="/main/about">About us</a></li>
                             <li>
                                 <a href="#" onclick="showProductsDropDown()">
                                     <span>Our Products</span>
@@ -152,12 +153,12 @@
                                 </a>
                             </li>
                             <ul class="menu-panel-products-dropdown" style="padding-left: 14px; display: none; line-height: 30px;">
-                                <li><a href="/main/shop.html">All Products</a></li>
-                                <li><a href="/main/shop.html?category=chocolate">Chocolates</a></li>
-                                <li><a href="/main/shop.html?category=bundles">Bundles</a></li>
-                                <li><a href="/main/shop.html?category=offers">Offers</a></li>
+                                <li><a href="/main/shop">All Products</a></li>
+                                <li><a href="/main/shop?category=chocolate">Chocolates</a></li>
+                                <li><a href="/main/shop?category=bundles">Bundles</a></li>
+                                <li><a href="/main/shop?category=offers">Offers</a></li>
                             </ul>
-                            <li><a href="/main/blogs.html">Blogs</a></li>
+                            <li><a href="/main/blogs">Blogs</a></li>
                             <li>
                                 <a href="#" onclick="showCatalogueDropDown()">
                                     <span>Catalogue</span>
@@ -194,7 +195,7 @@
                             </ul>
                             <li class="hr opacity-10 my-1"></li>
                         </ul>
-                        <a style="background-color: #E31E23; color: #fff; font-family: aeonik;" class="btn btn-sm xl:btn-md btn-secondary border border-2 border-black contrast-shadow-sm -rotate-2 hover:rotate-0 lg:d-inline-flex" href="/main/contact.html">
+                        <a style="background-color: #E31E23; color: #fff; font-family: aeonik;" class="btn btn-sm xl:btn-md btn-secondary border border-2 border-black contrast-shadow-sm -rotate-2 hover:rotate-0 lg:d-inline-flex" href="/main/contact">
                             <span>Get in touch</span>
                         </a>
                         <ul class="nav-x gap-1 mt-4">
@@ -219,7 +220,7 @@
       <div class="backtotop-wrap position-fixed bottom-0 end-0 z-99 m-2 vstack">
             <a style="background-color: #E31E23;"
                   class="btn btn-sm p-0 text-black border border-2 border-black contrast-shadow-sm w-48px h-48px rounded-circle"
-                  href="to_top.html" data-uc-backtotop>
+                  href="to_top" data-uc-backtotop>
                   <img class="icon icon-3" src="https://html.reactheme.com/muchwow/assets/images/icons/chevron-up.svg"
                         alt="to-top" data-uc-svg>
             </a>
@@ -236,7 +237,7 @@
                                     data-uc-navbar=" animation: uc-animation-slide-top-small; duration: 150;">
                                     <div class="uc-navbar-left">
                                           <div class="uc-logo">
-                                                <a class="panel text-none w-150px xl:w-auto" href="/index.html">
+                                                <a class="panel text-none w-150px xl:w-auto" href="/index">
                                                       <img src="./assets/images/kamco-logo-version2.svg"
                                                             style="height: 80px; filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.492));"
                                                             alt="Kamco Chew Foods">
@@ -245,8 +246,8 @@
                                     </div>
                                     <div class="uc-navbar-center">
                                           <ul style="color: white; font-family: aeonik;" class="uc-navbar-nav fs-5 xl:fs-4 gap-3 lg:gap-4 d-none lg:d-flex fw-semibold" data-uc-scrollspy-nav="closet: > *; offset: 48; scroll: true;">
-                                              <li><a href="/index.html">Home</a></li>
-                                              <li><a href="/main/about.html">About us</a></li>
+                                              <li><a href="/index">Home</a></li>
+                                              <li><a href="/main/about">About us</a></li>
           
                                               <li class="dropdown">
                                                   <a href="#" class="dropdown-toggle">
@@ -254,14 +255,14 @@
                                                       <img src="assets/images/icons/down.png" width="18" alt="">
                                                   </a>
                                                   <ul class="dropdown-menu">
-                                                      <li><a href="/main/shop.html">All Products</a></li>
-                                                      <li><a href="/main/shop.html?category=chocolate">Chocolates</a></li>
-                                                      <li><a href="/main/shop.html?category=bundles">Bundles</a></li>
-                                                      <li><a href="/main/shop.html?category=offers">Offers</a></li>
+                                                      <li><a href="/main/shop">All Products</a></li>
+                                                      <li><a href="/main/shop?category=chocolate">Chocolates</a></li>
+                                                      <li><a href="/main/shop?category=bundles">Bundles</a></li>
+                                                      <li><a href="/main/shop?category=offers">Offers</a></li>
                                                   </ul>
                                               </li>
                                               
-                                              <li><a href="/main/blogs.html">Blogs</a></li>
+                                              <li><a href="/main/blogs">Blogs</a></li>
                                               <li class="dropdown">
                                                   <a href="#" class="catalogueDropdown-toggle">
                                                       Catalogue
@@ -301,7 +302,7 @@
                                     <div class="uc-navbar-right">
                                           <a style="background-color: white; color: #E31E23; font-family: aeonik;"
                                                 class="btn btn-sm xl:btn-md btn-secondary border border-2 border-black contrast-shadow-sm -rotate-2 hover:rotate-0 d-none lg:d-inline-flex"
-                                                href="/main/contact.html">
+                                                href="/main/contact">
                                                 <span>Get in touch</span>
                                           </a>
                                           <a style="background-color: #F6B149;"
@@ -329,7 +330,10 @@
                         <source media="(max-width: 768px)" src="./assets/animation_01.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                   </video> -->
-                  <img src="./assets/Compressed_Gif.gif" alt="">
+                  <!-- <img src="./assets/Compressed_Gif.gif" alt=""> -->
+                  <!-- <dotlottie-player src="https://lottie.host/9033fcee-f743-4a59-b2e4-7b4aff673854/fKclrA25HN.lottie"
+                        background="transparent" speed="1" style="" loop autoplay></dotlottie-player> -->
+                        <iframe src="https://lottie.host/embed/9033fcee-f743-4a59-b2e4-7b4aff673854/fKclrA25HN.lottie"></iframe>
                   <h1>WELCOME TO <br>THE WORLD OF <br><span>KAMCO</span></h1>
 
             </div>
@@ -377,7 +381,7 @@
                                                             <div class="buttons hstack justify-center gap-2 xl:gap-3">
                                                                   <a style="background-color: #E31E23; color: white; font-family: aeonik;"
                                                                         class="btn btn-md xl:btn-2xl btn-secondary px-3 border border-2 border-black contrast-shadow-sm hover:-rotate-2"
-                                                                        href="/main/shop.html">
+                                                                        href="/main/shop">
                                                                         <span>Taste now</span>
                                                                   </a>
                                                                   <a style="background-color: #FCE8E8; color: #E31E23;"
@@ -549,7 +553,8 @@
                                                 <div class="col-11 sm:col-10 lg:col">
                                                       <div class="tokenomics-image panel border border-2 border-black contrast-shadow-xl text-black"
                                                             style="background-color: #FCE8E8">
-                                                            <video src="./assets/Main Gif Website 2025.mp4" autoplay loop muted></video>
+                                                            <!-- <video src="./assets/Main Gif Website 2025.mp4" autoplay loop muted></video> -->
+                                                             <img src="./assets/Main_1_08.gif" alt="">
                                                       </div>
                                                 </div>
                                           </div>
@@ -663,7 +668,7 @@
                                                             <div class="buttons hstack justify-center gap-2 xl:gap-3">
                                                                   <a style="background-color: #E31E23; color: white; font-family: aeonik;"
                                                                         class="btn btn-md xl:btn-2xl btn-secondary px-3 border border-2 border-black contrast-shadow-sm hover:-rotate-2"
-                                                                        href="/main/about.html">
+                                                                        href="/main/about">
                                                                         <span>Discover now</span>
                                                                   </a>
                                                             </div>
@@ -834,7 +839,7 @@
               e.preventDefault();
               $.ajax({
                   type: 'POST',
-                  url: 'https://kamcochewfood.com/dark/backend/subscribe.php',
+                  url: '/dark/backend/subscribe.php',
                   data: $(this).serialize(),
                   success: function(response) {
                       Swal.fire('Success!', response, 'success');
@@ -1033,7 +1038,7 @@
       <script>
             $(document).ready(function () {
                 $.ajax({
-                    url: 'https://kamcochewfood.com/main/backend/get_banners.php',
+                    url: '/main/backend/get_banners.php',
                     method: 'GET',
                     dataType: 'json',
                     success: function (response) {
@@ -1099,17 +1104,17 @@ function isMobileView() {
 async function fetchCategories() {
     try {
         const endpoint = isMobileView() 
-            ? 'https://kamcochewfood.com/main/backend/fetch_categories_mobile.php' 
-            : 'https://kamcochewfood.com/main/backend/fetch_categories_desktop.php';
+            ? '/main/backend/fetch_categories_mobile.php' 
+            : '/main/backend/fetch_categories_desktop.php';
             
         const response = await fetch(endpoint);
         if (!response.ok) throw new Error('Network response was not ok');
         const categories = await response.json();
         
         const dropdownHTML = [
-            '<li><a href="https://kamcochewfood.com/main/shop.html">All Product</a></li>',
+            '<li><a href="/main/shop">All Product</a></li>',
             ...categories.map(cat => `
-                <li><a href="https://kamcochewfood.com/main/shop.html?category=${encodeURIComponent(cat.name)}">${cat.name}</a></li>
+                <li><a href="/main/shop?category=${encodeURIComponent(cat.name)}">${cat.name}</a></li>
             `)
         ].join('');
 
@@ -1186,10 +1191,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
         </script>
+
+      <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
         
         
 </body>
 
-<!-- Mirrored from html.reactheme.com/muchwow/main/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Feb 2025 10:46:46 GMT -->
+<!-- Mirrored from html.reactheme.com/muchwow/main/index by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Feb 2025 10:46:46 GMT -->
 
 </html>

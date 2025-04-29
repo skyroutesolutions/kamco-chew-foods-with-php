@@ -3,7 +3,7 @@ const blogsGrid = document.getElementById("blogs-grid");
 
 async function fetchBlogs() {
       try {
-            const response = await fetch("https://kamcochewfood.com/main/backend/get_blog.php");
+            const response = await fetch("https://kamcochewfoods.com/main/backend/get_blog.php");
             const text = await response.text();         // Get raw text response
             // console.log("Raw Response:", text);          // Log raw response
 
@@ -15,10 +15,10 @@ async function fetchBlogs() {
                   blogs.forEach((blog, index) => {
                         blogsGrid.innerHTML += `
                               <div id="blog${index + 1}" class="individual-blog-wrapper">
-                                    <a href="blog.html?Name=${blog.name}">
+                                    <a href="blog?Name=${blog.name}">
                                     <div style="background-color: red; border-radius: 20px;" class="features-item panel vstack gap-4 xl:gap-6 px-4 py-6 xl:px-5 xl:py-8 border border-2 border-black contrast-shadow-md text-black bg-white rotate-1">
                                     <div class="feature-item-image">
-                                          <img style="height: 300px; width: 280px; object-fit: cover;" class="image mx-auto" src="https://kamcochewfood.com/dark/backend/uploads/blogs/${blog.images[0] || 'default.jpg'}" alt="${blog.name}">
+                                          <img style="height: 300px; width: 280px; object-fit: cover;" class="image mx-auto" src="https://kamcochewfoods.com/dark/backend/uploads/blogs/${blog.images[0] || 'default.jpg'}" alt="${blog.name}">
                                     </div>
                                     <div class="feature-item-content">
                                           <h6 style="color: #E31E23; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;" class="h5 xl:h6">
@@ -105,7 +105,7 @@ async function fetchBlogDetails(name) {
       </style>
     `;
 
-            const response = await fetch(`https://kamcochewfood.com/main/backend/get_blog_details.php?Name=${encodeURIComponent(name)}`);
+            const response = await fetch(`https://kamcochewfoods.com/main/backend/get_blog_details.php?Name=${encodeURIComponent(name)}`);
 
             if (!response.ok) {
                   throw new Error(`HTTP error! status: ${response.status}`);
@@ -129,7 +129,7 @@ async function fetchBlogDetails(name) {
           ${blog.images && blog.images.length > 0 ?
                               blog.images.map((image, index) => `
               <img 
-                src="https://kamcochewfood.com/dark/backend/uploads/blogs/${image || 'default.jpg'}"
+                src="https://kamcochewfoods.com/dark/backend/uploads/blogs/${image || 'default.jpg'}"
                 alt="${blog.name} - Image ${index + 1}"
                 class="gallery-image"
                 loading="lazy"
@@ -225,7 +225,7 @@ async function fetchBlogDetails(name) {
 // Fetch and display recent blogs
 async function fetchRecentBlogs() {
       try {
-            const response = await fetch("https://kamcochewfood.com/main/backend/get_recent_blogs.php");
+            const response = await fetch("https://kamcochewfoods.com/main/backend/get_recent_blogs.php");
             const blogs = await response.json();
 
             const recentBlogsContainer = document.querySelector(".recent-blogs");
@@ -234,8 +234,8 @@ async function fetchRecentBlogs() {
               <h2>Recent Blogs</h2>
               ${blogs.map(blog => `
                   <div>
-                      <a href="blog.html?Name=${encodeURIComponent(blog.name)}">
-                          <img src="https://kamcochewfood.com/dark/backend/uploads/blogs/${blog.image || 'default.jpg'}" alt="${blog.name}">
+                      <a href="blog?Name=${encodeURIComponent(blog.name)}">
+                          <img src="https://kamcochewfoods.com/dark/backend/uploads/blogs/${blog.image || 'default.jpg'}" alt="${blog.name}">
                       </a>
                       <div>
                           <p>${blog.name}</p>

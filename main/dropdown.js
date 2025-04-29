@@ -39,8 +39,8 @@ function isMobileView() {
 async function fetchCategories() {
     try {
         const endpoint = isMobileView() 
-            ? 'backend/fetch_categories_mobile.php' 
-            : 'backend/fetch_categories_desktop.php';
+              ? 'https://kamcochewfoods.com/main/backend/fetch_categories_mobile.php' 
+              : 'https://kamcochewfoods.com/main/backend/fetch_categories_desktop.php';
             
         const response = await fetch(endpoint);
         if (!response.ok) throw new Error('Network response was not ok');

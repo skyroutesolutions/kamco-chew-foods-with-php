@@ -17,7 +17,7 @@
       <meta property="og:title" content="Kamco Chew Foods">
       <meta property="og:description" content="More than just a treat, Taste the pinnacle of flavour">
       <meta property="og:site_name" content="Kamco Chew Foods">
-      <meta property="og:image" content="unistudio.co/html/muchwow/assets/images/common/seo-image.jpg">
+      <meta property="og:image" content="./assets/images/common/seo-image.jpg">
       <meta property="og:image:width" content="1180">
       <meta property="og:image:height" content="600">
       <meta property="og:image:type" content="image/png">
@@ -26,9 +26,8 @@
       <meta name="twitter:card" content="summary_large_image">
       <meta name="twitter:title" content="Kamco Chew Foods">
       <meta name="twitter:description" content="More than just a treat, Taste the pinnacle of flavour">
-      <meta name="twitter:image" content="unistudio.co/html/muchwow/assets/images/common/seo-image.jpg">
+      <meta name="twitter:image" content="./assets/images/common/seo-image.jpg">
 
-      <link rel="canonical" href="https://unistudio.co/html/muchwow/">
 
       <!-- preload head styles -->
       <link rel="preload" href="./assets/css/unicons.min.css" as="style">
@@ -74,31 +73,12 @@
       <link rel="stylesheet" href="./assets/css/style.css">
       <!-- include scripts -->
       <script src="./assets/js/uni-core/js/uni-core-bundle.min.js"></script>
-
-      <style>
-            #loader-animation{
-                  height: 100vh;
-                  width: 100vw;
-                  position: fixed;
-                  background-color: white;
-                  z-index: 9999;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  display: none;
-            }
-            #loader-animation img{
-                  height: 160px;
-                  width: 160px;
-                  object-fit: cover;
-            }
-      </style>
 </head>
 
 <body class="uni-body panel uni-body panel bg-white text-black overflow-x-hidden disable-cursor">
 
       <div id="loader-animation">
-            <img src="./assets/images/Loading_animation.gif" alt="">
+            <iframe src="https://lottie.host/embed/991b8617-affd-4772-89a1-9b8c350cbb9b/CtaYzlE6XI.lottie"></iframe>
       </div>
 
       <div class="animated-element">
@@ -144,8 +124,8 @@
 
                   <div class="panel">
                         <ul class="nav-y gap-narrow fw-medium fs-6" data-uc-nav>
-                            <li><a href="/index">Home</a></li>
-                            <li><a href="/main/about">About us</a></li>
+                            <li><a href="index">Home</a></li>
+                            <li><a href="main/about">About us</a></li>
                             <li>
                                 <a href="#" onclick="showProductsDropDown()">
                                     <span>Our Products</span>
@@ -153,12 +133,12 @@
                                 </a>
                             </li>
                             <ul class="menu-panel-products-dropdown" style="padding-left: 14px; display: none; line-height: 30px;">
-                                <li><a href="/main/shop">All Products</a></li>
-                                <li><a href="/main/shop?category=chocolate">Chocolates</a></li>
-                                <li><a href="/main/shop?category=bundles">Bundles</a></li>
-                                <li><a href="/main/shop?category=offers">Offers</a></li>
+                                <li><a href="main/shop">All Products</a></li>
+                                <li><a href="main/shop?category=chocolate">Chocolates</a></li>
+                                <li><a href="main/shop?category=bundles">Bundles</a></li>
+                                <li><a href="main/shop?category=offers">Offers</a></li>
                             </ul>
-                            <li><a href="/main/blogs">Blogs</a></li>
+                            <li><a href="main/blogs">Blogs</a></li>
                             <li>
                                 <a href="#" onclick="showCatalogueDropDown()">
                                     <span>Catalogue</span>
@@ -195,7 +175,7 @@
                             </ul>
                             <li class="hr opacity-10 my-1"></li>
                         </ul>
-                        <a style="background-color: #E31E23; color: #fff; font-family: aeonik;" class="btn btn-sm xl:btn-md btn-secondary border border-2 border-black contrast-shadow-sm -rotate-2 hover:rotate-0 lg:d-inline-flex" href="/main/contact">
+                        <a style="background-color: #E31E23; color: #fff; font-family: aeonik;" class="btn btn-sm xl:btn-md btn-secondary border border-2 border-black contrast-shadow-sm -rotate-2 hover:rotate-0 lg:d-inline-flex" href="main/contact">
                             <span>Get in touch</span>
                         </a>
                         <ul class="nav-x gap-1 mt-4">
@@ -237,7 +217,7 @@
                                     data-uc-navbar=" animation: uc-animation-slide-top-small; duration: 150;">
                                     <div class="uc-navbar-left">
                                           <div class="uc-logo">
-                                                <a class="panel text-none w-150px xl:w-auto" href="/index">
+                                                <a class="panel text-none w-150px xl:w-auto" href="index">
                                                       <img src="./assets/images/kamco-logo-version2.svg"
                                                             style="height: 80px; filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.492));"
                                                             alt="Kamco Chew Foods">
@@ -246,8 +226,8 @@
                                     </div>
                                     <div class="uc-navbar-center">
                                           <ul style="color: white; font-family: aeonik;" class="uc-navbar-nav fs-5 xl:fs-4 gap-3 lg:gap-4 d-none lg:d-flex fw-semibold" data-uc-scrollspy-nav="closet: > *; offset: 48; scroll: true;">
-                                              <li><a href="/index">Home</a></li>
-                                              <li><a href="/main/about">About us</a></li>
+                                              <li><a href="index">Home</a></li>
+                                              <li><a href="main/about">About us</a></li>
           
                                               <li class="dropdown">
                                                   <a href="#" class="dropdown-toggle">
@@ -255,14 +235,14 @@
                                                       <img src="assets/images/icons/down.png" width="18" alt="">
                                                   </a>
                                                   <ul class="dropdown-menu">
-                                                      <li><a href="/main/shop">All Products</a></li>
-                                                      <li><a href="/main/shop?category=chocolate">Chocolates</a></li>
-                                                      <li><a href="/main/shop?category=bundles">Bundles</a></li>
-                                                      <li><a href="/main/shop?category=offers">Offers</a></li>
+                                                      <li><a href="main/shop">All Products</a></li>
+                                                      <li><a href="main/shop?category=chocolate">Chocolates</a></li>
+                                                      <li><a href="main/shop?category=bundles">Bundles</a></li>
+                                                      <li><a href="main/shop?category=offers">Offers</a></li>
                                                   </ul>
                                               </li>
                                               
-                                              <li><a href="/main/blogs">Blogs</a></li>
+                                              <li><a href="main/blogs">Blogs</a></li>
                                               <li class="dropdown">
                                                   <a href="#" class="catalogueDropdown-toggle">
                                                       Catalogue
@@ -302,7 +282,7 @@
                                     <div class="uc-navbar-right">
                                           <a style="background-color: white; color: #E31E23; font-family: aeonik;"
                                                 class="btn btn-sm xl:btn-md btn-secondary border border-2 border-black contrast-shadow-sm -rotate-2 hover:rotate-0 d-none lg:d-inline-flex"
-                                                href="/main/contact">
+                                                href="main/contact">
                                                 <span>Get in touch</span>
                                           </a>
                                           <a style="background-color: #F6B149;"
@@ -333,8 +313,11 @@
                   <!-- <img src="./assets/Compressed_Gif.gif" alt=""> -->
                   <!-- <dotlottie-player src="https://lottie.host/9033fcee-f743-4a59-b2e4-7b4aff673854/fKclrA25HN.lottie"
                         background="transparent" speed="1" style="" loop autoplay></dotlottie-player> -->
-                        <iframe src="https://lottie.host/embed/9033fcee-f743-4a59-b2e4-7b4aff673854/fKclrA25HN.lottie"></iframe>
+                        <!-- <iframe src="https://lottie.host/embed/9033fcee-f743-4a59-b2e4-7b4aff673854/fKclrA25HN.lottie"></iframe> -->
                   <h1>WELCOME TO <br>THE WORLD OF <br><span>KAMCO</span></h1>
+                  <div id="hero-right-section">
+                        <iframe src="https://lottie.host/embed/9e69e928-0eab-423b-9fb9-f473ce87e698/6CW0OrBGUw.lottie"></iframe>
+                  </div>
 
             </div>
 
@@ -381,7 +364,7 @@
                                                             <div class="buttons hstack justify-center gap-2 xl:gap-3">
                                                                   <a style="background-color: #E31E23; color: white; font-family: aeonik;"
                                                                         class="btn btn-md xl:btn-2xl btn-secondary px-3 border border-2 border-black contrast-shadow-sm hover:-rotate-2"
-                                                                        href="/main/shop">
+                                                                        href="main/shop">
                                                                         <span>Taste now</span>
                                                                   </a>
                                                                   <a style="background-color: #FCE8E8; color: #E31E23;"
@@ -553,7 +536,7 @@
                                                 <div class="col-11 sm:col-10 lg:col">
                                                       <div class="tokenomics-image panel border border-2 border-black contrast-shadow-xl text-black"
                                                             style="background-color: #FCE8E8">
-                                                            <!-- <video src="./assets/Main Gif Website 2025.mp4" autoplay loop muted></video> -->
+                                                            <!-- <video src="./assetsmain Gif Website 2025.mp4" autoplay loop muted></video> -->
                                                              <img src="./assets/Main_1_08.gif" alt="">
                                                       </div>
                                                 </div>
@@ -668,7 +651,7 @@
                                                             <div class="buttons hstack justify-center gap-2 xl:gap-3">
                                                                   <a style="background-color: #E31E23; color: white; font-family: aeonik;"
                                                                         class="btn btn-md xl:btn-2xl btn-secondary px-3 border border-2 border-black contrast-shadow-sm hover:-rotate-2"
-                                                                        href="/main/about">
+                                                                        href="main/about">
                                                                         <span>Discover now</span>
                                                                   </a>
                                                             </div>
@@ -1038,7 +1021,7 @@
       <script>
             $(document).ready(function () {
                 $.ajax({
-                    url: '/main/backend/get_banners.php',
+                    url: 'main/backend/get_banners.php',
                     method: 'GET',
                     dataType: 'json',
                     success: function (response) {
@@ -1104,17 +1087,17 @@ function isMobileView() {
 async function fetchCategories() {
     try {
         const endpoint = isMobileView() 
-            ? '/main/backend/fetch_categories_mobile.php' 
-            : '/main/backend/fetch_categories_desktop.php';
+            ? 'main/backend/fetch_categories_mobile.php' 
+            : 'main/backend/fetch_categories_desktop.php';
             
         const response = await fetch(endpoint);
         if (!response.ok) throw new Error('Network response was not ok');
         const categories = await response.json();
         
         const dropdownHTML = [
-            '<li><a href="/main/shop">All Product</a></li>',
+            '<li><a href="main/shop">All Product</a></li>',
             ...categories.map(cat => `
-                <li><a href="/main/shop?category=${encodeURIComponent(cat.name)}">${cat.name}</a></li>
+                <li><a href="main/shop?category=${encodeURIComponent(cat.name)}">${cat.name}</a></li>
             `)
         ].join('');
 
@@ -1196,7 +1179,5 @@ document.addEventListener('DOMContentLoaded', function() {
         
         
 </body>
-
-<!-- Mirrored from html.reactheme.com/muchwow/main/index by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Feb 2025 10:46:46 GMT -->
 
 </html>

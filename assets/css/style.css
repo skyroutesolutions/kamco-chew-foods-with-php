@@ -13,6 +13,24 @@
       src: url(../fonts/SergioTrendy.ttf);
 }
 
+#loader-animation{
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      background-color: white;
+      z-index: 9999;
+}
+#loader-animation iframe{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 160px;
+      width: 160px;
+      object-fit: cover;
+      border: none;
+}
+
 .animated-element {
       position: fixed;
       top: 5%;
@@ -126,39 +144,34 @@ footer {
 }
 
 #Hero-Banner-Full {
-      /* background-image: url(../images/bg/Kamco_Landscape\ Background.jpg); */
-      /* background-size: cover; */
+      position: relative;
       height: 100vh;
       background-image: url(../images/bg/Kamco_Landscape\ Background.jpg);
-      overflow-x: hidden;
+      background-size: cover;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      overflow: hidden;
 }
 
-#Hero-Banner-Full video {
-      /* width: 50%; */
-      /* height: 100vh; */
-      /* position: absolute; */
-      /* right: 0; */
+#Hero-Banner-Full #hero-right-section{
       height: 100%;
+      width: 100%;
+      position: relative;
+      right: -20px;
 }
 
-/* #Hero-Banner-Full img {
-      height: 100vh;
-      position: absolute;
-      right: 0;
-
-} */
-
-#Hero-Banner-Full iframe {
-      height: 100vh;
-      width: 100vw;
-      position: absolute;
-      right: 0px;
+#Hero-Banner-Full #hero-right-section iframe{
+      height: 100%;
+      width: 100%;
 }
 
 #Hero-Banner-Full h1 {
       position: absolute;
-      top: 3%;
-      padding-left: 2%;
+      bottom: 30%;
+      left: 20px;
+      margin-left: 10%;
+      /* flex: 1; */
       font-size: 70px;
       color: #fff;
       font-family: 'ebrima' !important;
@@ -600,44 +613,33 @@ footer {
       }
 
       #Hero-Banner-Full {
-            height: 100vh;
             background-image: url(../images/bg/Kamco_Portrait\ Background.jpg);
             background-size: cover;
-            right: 0;
       }
 
-      /* #Hero-Banner-Full video {
-            width: 100vw;
-            height: 100vh;
-      } */
+      #Hero-Banner-Full #hero-right-section{
+            height: initial;
+            width: initial;
+            margin-right: 20px;
+            top: -5%;
+      }
 
-      /* #Hero-Banner-Full img {
-            height: 40vh;
-            position: absolute;
-            right: 0;
-            top: 2%;
-      } */
-
-            #Hero-Banner-Full iframe {
-                  height: 40vh;
-                  width: 100vw;
-                  position: absolute;
-                  right: 0;
-                  top: 2%;
-            }
-            
-
+      #Hero-Banner-Full #hero-right-section iframe{
+            height: initial;
+            aspect-ratio: 1;
+            width: 600px;
+      }
 
       #Hero-Banner-Full h1 {
-            position: absolute;
-            top: 5%;
-            /* padding-left: 2%; */
-            left: 2%;
-            font-size: 45px;
+            font-size: 35px;
             color: #fff;
             font-family: 'ebrima' !important;
             font-weight: 700;
             text-align: left;
+
+            bottom: 0%;
+            left: 20px;
+            margin-left: 0%;
       }
 
       #Hero-Banner-Full span {

@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Agar .php file hai aur user bina extension ke URL deta hai
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L]
+
+# Agar .html file hai aur user bina extension ke URL deta hai
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]

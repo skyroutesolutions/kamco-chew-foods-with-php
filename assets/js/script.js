@@ -1,4 +1,4 @@
-const img = document.querySelector('#Hero-Banner-Full img');
+const img = document.querySelector('#Hero-Banner-Full iframe');
 
 if (img.complete) {
   onImageLoaded();

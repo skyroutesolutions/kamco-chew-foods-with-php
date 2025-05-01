@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     
-<!-- Mirrored from html.reactheme.com/muchwow/main/index by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Feb 2025 10:46:34 GMT -->
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Kamco Chew Foods</title>
         <link rel="icon" type="image/png" href="../assets/images/kamco-logo-version1.svg"/>
         <meta name="description" content="More than just a treat, Taste the pinnacle of flavour">
-        <meta name="keywords" content="crypto, crypto ico, cryptocurrency, digital currency, ico, ico agency, ico crypto, ico landing page, ico token, meme coin, meme ico exchange, meme token, memecoin">
-        <link rel="canonical" href="https://unistudio.co/html/muchwow">
         <meta name="theme-color" content="#e31e23">
 
         <!-- Open Graph Tags -->
@@ -17,9 +14,8 @@
         <meta property="og:type" content="website">
         <meta property="og:title" content="Kamco Chew Foods">
         <meta property="og:description" content="More than just a treat, Taste the pinnacle of flavour">
-        <meta property="og:url" content="https://unistudio.co/html/muchwow/">
         <meta property="og:site_name" content="Kamco Chew Foods">
-        <meta property="og:image" content="../../../unistudio.co/html/muchwow/assets/images/common/seo-image.jpg">
+        <meta property="og:image" content="./assets/images/common/seo-image.jpg">
         <meta property="og:image:width" content="1180">
         <meta property="og:image:height" content="600">
         <meta property="og:image:type" content="image/png">
@@ -28,9 +24,8 @@
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Kamco Chew Foods">
         <meta name="twitter:description" content="More than just a treat, Taste the pinnacle of flavour">
-        <meta name="twitter:image" content="../../../unistudio.co/html/muchwow/assets/images/common/seo-image.jpg">
+        <meta name="twitter:image" content="./assets/images/common/seo-image.jpg">
 
-        <link rel="canonical" href="https://unistudio.co/html/muchwow/">
 
         <!-- preload head styles -->
         <link rel="preload" href="../assets/css/unicons.min.css" as="style">
@@ -86,7 +81,7 @@
             <div class="uc-offcanvas-bar m-1 rounded-2 border border-2 border-black contrast-shadow-md bg-secondary-200 text-dark dark:bg-gray-900 dark:text-white">
                 <header class="uc-offcanvas-header hstack justify-between items-center pb-2">
                     <div class="uc-logo">
-                        <a href="/index" class="h5 text-none text-gray-900 dark:text-white">
+                        <a href="../index" class="h5 text-none text-gray-900 dark:text-white">
                             <img class="w-50px" src="../assets/images/kamco-logo-version1.svg" alt="Kamco Chew Foods">
                         </a>
                     </div>
@@ -97,7 +92,7 @@
 
                 <div class="panel">
                     <ul class="nav-y gap-narrow fw-medium fs-6" data-uc-nav>
-                        <li><a href="/index">Home</a></li>
+                        <li><a href="../index">Home</a></li>
                         <li><a href="/main/about">About us</a></li>
                         <li>
                             <a href="#" onclick="showProductsDropDown()">
@@ -184,14 +179,14 @@
                         <div style="background-color: #E31E23; backdrop-filter: blur(5px); padding: 10px;" class="uc-navbar min-h-64px lg:min-h-80px xl:min-h-100px ps-2 pe-1 lg:px-4 border border-2 border-black contrast-shadow-md rounded-2 lg:rounded-3" data-uc-navbar=" animation: uc-animation-slide-top-small; duration: 150;" >
                             <div class="uc-navbar-left">
                                 <div class="uc-logo">
-                                    <a class="panel text-none w-150px xl:w-auto" href="/index">
+                                    <a class="panel text-none w-150px xl:w-auto" href="../index">
                                         <img src="../assets/images/kamco-logo-version2.svg" style="height: 80px; filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.492));" alt="Kamco Chew Foods">
                                     </a>
                                 </div>
                             </div>
                             <div class="uc-navbar-center">
                                 <ul style="color: white; font-family: aeonik;" class="uc-navbar-nav fs-5 xl:fs-4 gap-3 lg:gap-4 d-none lg:d-flex fw-semibold" data-uc-scrollspy-nav="closet: > *; offset: 48; scroll: true;">
-                                    <li><a href="/index">Home</a></li>
+                                    <li><a href="../index">Home</a></li>
                                     <li><a href="/main/about">About us</a></li>
 
                                     <li class="dropdown">
@@ -397,121 +392,195 @@
             <script defer src="../assets/js/app.js"></script>
             <script defer src="../assets/js/features.js"></script>
     
-         <script>// Fetch and display categories
-            async function fetchCategories() {
-                try {
-                    const response = await fetch("backend/get_categories.php");
-                    const categories = await response.json();
-            
-                    const categoryContainer = document.getElementById("shop-header-container");
-                    if (categories.length > 0) {
-                        categoryContainer.innerHTML = `
-                            <h2 id="0" style="color: #FEE0A9;">
-                                Shop All
-                                <span><img src="../assets/images/elements/coin.png" alt=""></span>
-                            </h2>
-                        ` + categories.map((category, index) => `
-                            <h2 id="${category.id}">
-                                ${category.name}
-                                <span></span>
-                            </h2>
-                        `).join('');
-                    } else {
-                        categoryContainer.innerHTML = "<p>No active categories available.</p>";
+            <script>
+                // Fetch and display categories
+                const categoryContainer = document.getElementById("shop-header-container");
+                
+                async function fetchCategories() {
+                    try {
+                        const response = await fetch("backend/get_categories.php");
+                        const categories = await response.json();
+                
+                        const totalCount = categories.reduce((acc, category) => acc + (parseInt(category.count) || 0), 0);
+
+                        // categories = [
+                        //     {
+                        //         id: 1,
+                        //         name: 'abcd',
+                        //         count: 5
+                        //     },
+                        //     {
+                        //         id: 1,
+                        //         name: 'abcd',
+                        //         count: 5
+                        //     },
+                        //     {
+                        //         id: 1,
+                        //         name: 'abcd',
+                        //         count: 5
+                        //     },
+                        //     {
+                        //         id: 1,
+                        //         name: 'abcd',
+                        //         count: 5
+                        //     },
+                        // ]
+                
+                        if (categories.length > 0) {
+                            categoryContainer.innerHTML = `
+                                <h2 id="0" style="color: #FEE0A9;">
+                                    <span>Shop All</span>
+                                    (<span>${totalCount || 0}</span>)
+                                    <span class="select-icon-parent"><img src="../assets/images/elements/coin.png" alt=""></span>
+                                </h2>
+                            ` + categories.map(category => `
+                                <h2 id="${category.id}" style="color: white;">
+                                    <span>${category?.name || "NA"}</span>
+                                    (<span>${category?.count || 0}</span>)
+                                    <span class="select-icon-parent"></span>
+                                </h2>
+                            `).join('');
+                        } else {
+                            categoryContainer.innerHTML = "<p>No active categories available.</p>";
+                        }
+                    } catch (error) {
+                        console.error("Failed to fetch categories:", error);
                     }
-                } catch (error) {
-                    console.error("Failed to fetch categories:", error);
                 }
-            }
-            
-            // Fetch and display products
-            async function fetchProducts(categoryId = 0) {
-                  console.log("Fetching products for category ID:", categoryId);
-                try {
-                      const response = await fetch(`backend/get_products.php?category_id=${categoryId}`);
-                    const products = await response.json();
-            console.log("Fetched products:", products);
-                    const productsGrid = document.getElementById("products-grid");
-                    productsGrid.innerHTML = products.length > 0 ? products.map(product => `
-                        <div onclick="openProductModal(${product.id})">
-                            <div id="shop-card" class="features-item panel vstack gap-4 xl:gap-6 px-4 py-6 xl:px-5 xl:py-8 border border-2 border-black contrast-shadow-md text-black bg-white rotate-1">
-                                <div class="feature-item-image">
-                                    <img style="height: 300px; width: 280px; object-fit: cover;" class="image mx-auto" src="../dark/backend/${product.image}" alt="${product.name}">
-                                </div>
-                                <div class="feature-item-content">
-                                    <h6 style="color: #E31E23;" class="h5 xl:h6">${product.name}</h6>
+                
+                // Fetch and display products
+                async function fetchProducts(categoryId = 0) {
+                    console.log("Fetching products for category ID:", categoryId);
+                    try {
+                        const response = await fetch(`backend/get_products.php?category_id=${categoryId}`);
+                        const products = await response.json();
+                        console.log("Fetched products:", products);
+                
+                        const productsGrid = document.getElementById("products-grid");
+                        productsGrid.innerHTML = products.length > 0 ? products.map(product => `
+                            <div onclick="openProductModal(${product.id})">
+                                <div id="shop-card" class="features-item panel vstack gap-4 xl:gap-6 px-4 py-6 xl:px-5 xl:py-8 border border-2 border-black contrast-shadow-md text-black bg-white rotate-1">
+                                    <div class="feature-item-image">
+                                        <img style="height: 300px; width: 280px; object-fit: cover;" class="image mx-auto" src="../dark/backend/${product.image}" alt="${product.name}">
+                                    </div>
+                                    <div class="feature-item-content">
+                                        <h6 style="color: #E31E23;" class="h5 xl:h6">${product.name}</h6>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    `).join('') : "<p>No products available in this category.</p>";
-                } catch (error) {
-                    console.error("Failed to fetch products:", error);
+                        `).join('') : "<p>No products available in this category.</p>";
+                    } catch (error) {
+                        console.error("Failed to fetch products:", error);
+                    }
                 }
-            }
-            
-            // Initial load
-            fetchCategories();
-            fetchProducts();  // Load all products initially
-            
-            // Handle category selection
-            document.getElementById("shop-header-container").addEventListener("click", (e) => {
-                if (e.target.tagName === "H2") {
-                    const selecters = document.querySelectorAll("#shop-header-container h2");
-                    selecters.forEach(selecter => {
-                        selecter.style.color = "white";
-                        selecter.querySelector("span").innerHTML = "";
-                    });
-            
-                    e.target.style.color = "#FEE0A9";
-                    e.target.querySelector("span").innerHTML = `<img src="../assets/images/elements/coin.png" alt="">`;
-                    const selectedCategoryId = parseInt(e.target.id) || 0;
-                    fetchProducts(selectedCategoryId);  // Fetch products for selected category
+                
+                // Initial load
+                fetchCategories();
+                fetchProducts(); // Load all products initially
+                
+                // Handle category selection
+                categoryContainer.addEventListenfer("click", (e) => {
+                    const h2Element = e.target.closest("h2");
+                    if (h2Element && categoryContainer.contains(h2Element)) {
+                        const selectors = document.querySelectorAll("#shop-header-container h2");
+                        selectors.forEach(selector => {
+                            selector.style.color = "white";
+                            const iconParent = selector.querySelector(".select-icon-parent");
+                            if (iconParent) iconParent.innerHTML = "";
+                        });
+                
+                        h2Element.style.color = "#FEE0A9";
+                        const iconParent = h2Element.querySelector(".select-icon-parent");
+                        if (iconParent) {
+                            iconParent.innerHTML = `<img src="../assets/images/elements/coin.png" alt="">`;
+                        }
+                
+                        const selectedCategoryId = parseInt(h2Element.id) || 0;
+                        fetchProducts(selectedCategoryId); // Fetch products for selected category
+                    }
+                });
+                
+                // Product modal handling
+                const modal = document.getElementById("product-modal");
+                const productImage = document.getElementById("product-image");
+                const productTitle = document.getElementById("product-title");
+                const productDescription = document.getElementById("product-description");
+                const closeBtn = document.querySelector(".close-btn");
+                
+                // Function to open the product modal with backend data
+                const openProductModal = async (id) => {
+                    try {
+                        const response = await fetch(`backend/get_product.php?id=${id}`);
+                        const product = await response.json();
+                
+                        if (product.error) {
+                            console.error("Product not found:", product.error);
+                        } else {
+                            // Populate the modal with product data
+                            productImage.src = `../dark/backend/${product.image}`;
+                            productTitle.textContent = product.title;
+                            productDescription.textContent = product.description;
+                            modal.style.display = "flex";
+                
+                            // Add fade-in animation
+                            setTimeout(() => {
+                                modal.classList.add("show");
+                            }, 10);
+                        }
+                    } catch (error) {
+                        console.error("Failed to fetch product details:", error);
+                    }
+                };
+                
+                // Close modal on clicking the close button
+                closeBtn.addEventListener("click", () => {
+                    modal.classList.remove("show");
+                    setTimeout(() => {
+                        modal.style.display = "none";
+                        productImage.src = "";
+                        productTitle.textContent = "";
+                        productDescription.textContent = "";
+                    }, 300); // Match CSS transition time
+                });
+                
+                // Close modal on clicking outside of it
+                modal.addEventListener("click", (e) => {
+                    if (e.target === modal) {
+                        closeBtn.click();
+                    }
+                });
+                </script>
+                
+                <!-- Fade-in animation for modal -->
+                <style>
+                #product-modal {
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+                    position: fixed;
+                    top: 0; left: 0;
+                    width: 100%; height: 100%;
+                    background: rgba(0,0,0,0.6);
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                    z-index: 1000;
                 }
-            });
-    
-    
-            const modal = document.getElementById("product-modal");
-    const productImage = document.getElementById("product-image");
-    const productTitle = document.getElementById("product-title");
-    const productDescription = document.getElementById("product-description");
-    const closeBtn = document.querySelector(".close-btn");
-    
-    // 🆕 Function to open the product modal with backend data
-    const openProductModal = async (id) => {
-        try {
-            // Fetch product data from the backend
-            const response = await fetch(`backend/get_product.php?id=${id}`);
-            const product = await response.json();
-    
-            if (product.error) {
-                console.error("Product not found:", product.error);
-            } else {
-                // Populate the modal with product data
-                productImage.src = product.image;
-                productTitle.textContent = product.title;
-                productDescription.textContent = product.description;
-                modal.style.display = "flex";
-            }
-        } catch (error) {
-            console.error("Failed to fetch product details:", error);
-        }
-    };
-    
-    // Close modal on clicking the close button
-    closeBtn.addEventListener("click", () => modal.style.display = "none");
-    
-    // Close modal on clicking outside of it
-    modal.addEventListener("click", (e) => {
-        if (e.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-    
-            </script>
+                #product-modal.show {
+                    opacity: 1;
+                }
+                #product-modal .modal-content {
+                    background: white;
+                    padding: 20px;
+                    max-width: 600px;
+                    width: 90%;
+                    border-radius: 8px;
+                    overflow: hidden;
+                }
+                </style>
+                
         <script src="dropdown.js"></script>
 
 
 </body>
 
-<!-- Mirrored from html.reactheme.com/muchwow/main/index by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Feb 2025 10:46:46 GMT -->
 </html>

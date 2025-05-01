@@ -39,17 +39,17 @@ function isMobileView() {
 async function fetchCategories() {
     try {
         const endpoint = isMobileView() 
-              ? 'https://kamcochewfoods.com/main/backend/fetch_categories_mobile.php' 
-              : 'https://kamcochewfoods.com/main/backend/fetch_categories_desktop.php';
+              ? 'backend/fetch_categories_mobile.php' 
+              : 'backend/fetch_categories_desktop.php';
             
         const response = await fetch(endpoint);
         if (!response.ok) throw new Error('Network response was not ok');
         const categories = await response.json();
         
         const dropdownHTML = [
-            '<li><a href="/main/shop.html">All Product</a></li>',
+            '<li><a href="shop.html">All Product</a></li>',
             ...categories.map(cat => `
-                <li><a href="/main/shop.html?category=${encodeURIComponent(cat.name)}">${cat.name}</a></li>
+                <li><a href="shop.html?category=${encodeURIComponent(cat.name)}">${cat.name}</a></li>
             `)
         ].join('');
 

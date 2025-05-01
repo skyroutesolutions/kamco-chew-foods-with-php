@@ -1,28 +1,79 @@
-#chokoChunk{
+.about-us-hero {
+  height: 100vh;
+  width: 100vw;
+}
+
+.hero-bg {
+  position: relative;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.0;
+  z-index: 1;
+}
+
+.hero-bg img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 0;
+}
+
+.about-us-heading {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 10;
+}
+
+.about-us-heading h2 {
+  font-family: sergio !important;
+  text-align: center;
+}
+
+#chokoChunk {
   position: absolute;
   width: 8%;
   top: 0%;
   left: 0%
 }
 
-#toon1{
+#toon1 {
   position: absolute;
   width: 8%;
   bottom: 0%;
   right: 0%
 }
 
-@media screen and (max-width: 768px){
-  #chokoChunk{
+@media screen and (max-width: 768px) {
+  .about-us-hero {
+    height: 55vh;
+  }
+
+  .about-us-heading {
+    top: 75%;
+  }
+
+  #chokoChunk {
     height: 80px;
     width: 80px;
     object-fit: cover;
   }
 
-  #toon1{
+  #toon1 {
     width: 15%;
     bottom: 0%;
     right: 0%
   }
-  
+
 }

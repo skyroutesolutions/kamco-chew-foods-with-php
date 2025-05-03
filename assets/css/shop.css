@@ -101,6 +101,10 @@
   padding-bottom: 80px;
 }
 
+#products-grid{
+  padding: 20px;
+}
+
 #shop-card{
   border-radius: 20px;
   background-image: url(../images/bg/about.jpg);
@@ -173,10 +177,10 @@
 
 @media screen and (max-width: 768px){
   #shop-container {
-    margin: 140px 10px 10px 10px;
+    /* margin: 140px 10px 10px 10px; */
     position: relative;
     overflow: hidden;
-    background-image: url(../images/bg/elements.png);
+    /* background-image: url(../images/bg/elements.png); */
     background-size: contain;
     background-repeat: repeat-y;
   }
@@ -186,11 +190,7 @@
   }
 
   #shop-header-container h2{
-    font-size: 18px !important;
-  }
-
-  #shop-header-container h2 img{
-    height: 24px;
+    font-size: 22px !important;
   }
 
   #modal-section-inner{

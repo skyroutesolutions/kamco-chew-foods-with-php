@@ -100,11 +100,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const productsToggle = document.querySelector('.dropdown-toggle');
     const productsMenu = document.querySelector('.dropdown-menu');
-    
+    let initialLoading = true;
+
     if (productsToggle && productsMenu) {
-        productsToggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            productsMenu.style.display = productsMenu.style.display === 'none' ? 'block' : 'none';
+        productsToggle.addEventListener('click', function (e) {
+                e.preventDefault();
+                productsMenu.style.display = productsMenu.style.display === 'none' || initialLoading ? 'block' : 'none';
+                initialLoading = false;
         });
     }
 

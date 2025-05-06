@@ -187,6 +187,8 @@
 
   #shop-header-container{
     /* flex-direction: column; */
+      justify-content:flex-start;
+      white-space: nowrap;
   }
 
   #shop-header-container h2{

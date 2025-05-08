@@ -19,7 +19,12 @@
       position: fixed;
       background-color: white;
       z-index: 9999;
+      transition: opacity 0.5s ease;
 }
+#loader-animation.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
 #loader-animation iframe{
       position: absolute;
       top: 50%;

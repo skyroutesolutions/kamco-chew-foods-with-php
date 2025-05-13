@@ -23,7 +23,7 @@ if (!isset($_SESSION['admin_id'])) {
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/icofont.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/webp" href="assets/images/favicon.webp">
 </head>
 
 <body>

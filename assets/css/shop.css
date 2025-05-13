@@ -1,7 +1,7 @@
 #shop-hero{
   height: 70vh;
   width: 100vw;
-  background-image: url(../images/bg/shop-hero.jpg);
+  background-image: url(../images/bg/shop-hero.webp);
   background-size: cover;
   background-repeat: no-repeat; 
   background-position: center;
@@ -94,7 +94,7 @@
 }
 
 #shop-container .section-content{
-  background-image: url(../images/bg/elements.png);
+  background-image: url(../images/bg/elements.webp);
   background-size: cover;
   background-repeat: repeat-y;
   padding-top: 20px;
@@ -107,7 +107,7 @@
 
 #shop-card{
   border-radius: 20px;
-  background-image: url(../images/bg/about.jpg);
+  background-image: url(../images/bg/about.webp);
   cursor: pointer;
 }
 

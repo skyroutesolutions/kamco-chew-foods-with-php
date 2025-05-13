@@ -61,8 +61,11 @@
 
 @media screen and (max-width: 768px) {
       .about-us-hero {
-            height: 40vh;
-            background-size: contain;
+            height: 60vh;
+      }
+
+      .hero-bg {
+            height: 60vh;
       }
 
       .about-us-heading {

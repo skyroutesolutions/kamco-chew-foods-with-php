@@ -151,7 +151,7 @@ footer {
 #Hero-Banner-Full {
       position: relative;
       height: 100vh;
-      background-image: url(../images/bg/Kamco_Landscape\ Background.jpg);
+      background-image: url(../images/bg/Kamco_Landscape\ Background.webp);
       background-size: cover;
       display: flex;
       justify-content: flex-end;
@@ -188,11 +188,11 @@ footer {
       font-size: 90px;
 }
 
-#hero-container {
+/* #hero-container {
       background-image: url(../images/bg/hero.png);
       background-size: cover;
       height: 130vh;
-}
+} */
 
 .hero-products {
       position: absolute;
@@ -231,7 +231,7 @@ footer {
       margin: 20px 40px 0px 40px;
       border: 4px solid black;
       border-radius: 30px;
-      background-image: url(../images/bg/about.jpg);
+      background-image: url(../images/bg/about.webp);
       background-color: transparent;
       background-size: cover;
 }
@@ -420,7 +420,7 @@ footer {
       margin: 40px;
       border: 4px solid black;
       border-radius: 30px;
-      background-image: url(../images/bg/about.jpg);
+      background-image: url(../images/bg/about.webp);
       background-color: transparent;
       background-size: cover;
 }
@@ -492,7 +492,7 @@ footer {
       margin: 0px 40px 0px 40px;
       border: 4px solid black;
       border-radius: 30px;
-      background-image: url(../images/bg/about.jpg);
+      background-image: url(../images/bg/about.webp);
       background-color: transparent;
       background-size: cover;
       margin-bottom: 50px;
@@ -618,7 +618,7 @@ footer {
       }
 
       #Hero-Banner-Full {
-            background-image: url(../images/bg/Kamco_Portrait\ Background.jpg);
+            background-image: url(../images/bg/Kamco_Portrait\ Background.webp);
             background-size: cover;
       }
 
@@ -652,12 +652,12 @@ footer {
             font-size: 60px;
       }
 
-      #hero-container {
+      /* #hero-container {
             background-image: url(../images/bg/hero-mobile.png);
             background-position: center;
             background-size: cover;
             height: 100vh;
-      }
+      } */
 
 
       .section-inner {

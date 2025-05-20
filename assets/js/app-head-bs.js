@@ -78,17 +78,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const e = document.getElementById("uc-gdpr-notification");
   localStorage.getItem("gdprAccepted") ||
     setTimeout(function () {
-      e.classList.add("show");
+      e?.classList.add("show");
     }, 5e3),
     document
       .getElementById("uc-accept-gdpr")
-      .addEventListener("click", function () {
+      ?.addEventListener("click", function () {
         e.classList.remove("show"),
           localStorage.setItem("gdprAccepted", "true");
       }),
     document
       .getElementById("uc-close-gdpr-notification")
-      .addEventListener("click", function () {
+      ?.addEventListener("click", function () {
         e.classList.remove("show");
       });
 }),

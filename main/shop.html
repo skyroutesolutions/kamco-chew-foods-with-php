@@ -97,7 +97,7 @@
                 <button
                     class="uc-offcanvas-close rtl:end-auto rtl:start-0 m-1 mt-2 p-0 btn border-0 dark:text-white dark:text-opacity-50 hover:text-primary hover:rotate-90 duration-150 transition-all"
                     type="button">
-                    <img class="icon icon-3" src="https://html.reactheme.com/muchwow/assets/images/icons/close.svg"
+                    <img class="icon icon-3" src="../assets/images/icons/close.svg"
                         alt="close" data-uc-svg>
                 </button>
             </header>
@@ -211,7 +211,7 @@
         <a style="background-color: #E31E23;"
             class="btn btn-sm p-0 text-black border border-2 border-black contrast-shadow-sm w-48px h-48px rounded-circle"
             href="to_top" data-uc-backtotop>
-            <img class="icon icon-3" src="https://html.reactheme.com/muchwow/assets/images/icons/chevron-up.svg"
+            <img class="icon icon-3" src="../assets/images/icons/chevron-up.svg"
                 alt="to-top" data-uc-svg>
         </a>
     </div>
@@ -332,7 +332,7 @@
                                 class="btn btn-md btn-secondary w-48px h-48px p-0 border border-2 border-black contrast-shadow-sm d-inline-flex lg:d-none"
                                 href="#uc-menu-panel" data-uc-toggle>
                                 <img class="icon icon-3"
-                                    src="https://html.reactheme.com/muchwow/assets/images/icons/menu.svg" alt="menu"
+                                    src="../assets/images/icons/menu.svg" alt="menu"
                                     data-uc-svg>
                             </a>
                         </div>
@@ -470,6 +470,15 @@
     <script defer src="../assets/js/libs/jquery.min.js"></script>
     <script defer src="../assets/js/libs/bootstrap.min.js"></script>
 
+    <!-- CDNs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- include scripts -->
     <script defer src="../assets/js/libs/anime.min.js"></script>
     <script defer src="../assets/js/libs/swiper-bundle.min.js"></script>
@@ -524,7 +533,6 @@
 
         // Fetch and display products
         async function fetchProducts(categoryId = 0) {
-            console.log("Fetching products for category ID:", categoryId);
             try {
                 const response = await fetch(`backend/get_products.php?category_id=${categoryId}`);
                 const products = await response.json();

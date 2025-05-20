@@ -76,8 +76,19 @@ const urlParams = new URLSearchParams(queryString);
 const blogName = urlParams.get("Name");
 if (blogName) {
       fetchBlogDetails(blogName);
-} else {
-      console.error("Blog name not found in URL");
+}
+
+
+// Schema toggle via URL
+const getSchema = urlParams.get("schema");
+if (getSchema === "dark") {
+      setDarkMode(1);
+} else if (getSchema === "light") {
+      setDarkMode(0);
+}
+
+if (window.location.href.split("#")[1] === "faq") {
+      document.getElementsByClassName("animated-element")[0].style.display = "none";
 }
 
 // Function to fetch blog details by name
@@ -247,8 +258,11 @@ async function fetchRecentBlogs() {
                   recentBlogsContainer.innerHTML = "<p>No recent blogs available.</p>";
             }
       } catch (error) {
-            console.error("Failed to fetch recent blogs:", error);
-            document.querySelector(".recent-blogs").innerHTML = "<p>Error loading recent blogs.</p>";
+            // console.error("Failed to fetch recent blogs:", error);
+            recentBlogsContainer = document.querySelector(".recent-blogs");
+            if(recentBlogsContainer){
+                  recentBlogsContainer.innerHTML = "<p>Error loading recent blogs.</p>";
+            }
       }
 }
 

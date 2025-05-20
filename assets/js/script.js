@@ -1,7 +1,5 @@
 const loadingIframe = document.querySelector("#Hero-Banner-Full iframe");
 
-console.log(loadingIframe);
-
 // if (loadingIframe.complete) {
 //   onImageLoaded();
 // } else {
@@ -13,12 +11,12 @@ console.log(loadingIframe);
 // }
 
 loadingIframe?.addEventListener("load", () => {
-  document.querySelector("#loader-animation").classList.add("hidden");
+  document.querySelector("#loader-animation")?.classList.add("hidden");
 });
 
 window.addEventListener("load", () => {
   setTimeout(() => {
-    document.querySelector('#loader-animation').classList.add('hidden');
+    document.querySelector('#loader-animation')?.classList.add('hidden');
   }, 2000);
 });
 

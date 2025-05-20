@@ -3,34 +3,37 @@ gsap.registerPlugin(ScrollTrigger);
 const heroProduct1 = document.getElementById("hero-product1");
 const heroProduct2 = document.getElementById("hero-product2");
 const heroProduct3 = document.getElementById("hero-product3");
+const heroHeader = document.querySelector("#hero-header");
 
-const heroTl = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#hero-header",
-    start: "top 10%"
-  }
-});
-
-heroTl.from(heroProduct1, {
-  duration: 2.5,
-  left: "0%",
-  transform: "rotate(10deg)",
-  opacity: 0,
-  ease: "power2.inOut",
-}, "a")
-.from(heroProduct2, {
-  duration: 2.5,
-  right: "0%",
-  transform: "rotate(-10deg)",
-  opacity: 0,
-  ease: "power2.inOut",
-}, "a")
-.from(heroProduct3, {
-  duration: 2.5,
-  top: "40%",
-  opacity: 0,
-  ease: "power2.inOut",
-}, "a")
+if(heroHeader){
+  const heroTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#hero-header",
+      start: "top 10%"
+    }
+  });
+  
+  heroTl.from(heroProduct1, {
+    duration: 2.5,
+    left: "0%",
+    transform: "rotate(10deg)",
+    opacity: 0,
+    ease: "power2.inOut",
+  }, "a")
+  .from(heroProduct2, {
+    duration: 2.5,
+    right: "0%",
+    transform: "rotate(-10deg)",
+    opacity: 0,
+    ease: "power2.inOut",
+  }, "a")
+  .from(heroProduct3, {
+    duration: 2.5,
+    top: "40%",
+    opacity: 0,
+    ease: "power2.inOut",
+  }, "a")
+}
 
 // TODO: Revert back the positions of hero elements
 
@@ -68,58 +71,60 @@ const tl = gsap.timeline({
   }
 });
 
-// Define interactive transitions
-tl.to(".animated-element", { 
-  top: "40%",
-  opacity: 1,
-  scale: 1.2,
-  rotate: -180,
-  ease: "power2.out"
-}) 
-.to(".animated-element", { 
-  rotate: 0,
-  opacity: 0,
-  top: "30%", 
-  right: "80%", 
-  scale: 1.4,
-  duration: 2,
-  ease: "power3.inOut"
-})
-.to(".animated-element", { 
-  opacity: 1,
-  top: "20%", 
-  right: "20%",
-  scale: 1,
-  rotate: 180,
-  duration: 2,
-  ease: "elastic.out(1, 0.5)"
-})
-.to(".animated-element", { 
-  top: "85%",
-  right: "10%",
-  scale: 1.5,
-  rotate: 270,
-  duration: 2,
-  ease: "back.inOut(2)"
-})
-.to(".animated-element", { 
-  top: "50%", 
-  right: "80%", 
-  scale: 1,
-  rotate: 360,
-  duration: 2,
-  ease: "power2.out"
-})
-.to(".animated-element", {
-  rotate: 480,
-  duration: 2,
-  ease: "power2.out"
-})
-.to(".animated-element", {
-  rotate: 600,
-  duration: 2,
-  ease: "power2.out"
-});
+const animatedElement = document.querySelector(".animated-element");
+if(animatedElement){
+  tl.to(".animated-element", { 
+    top: "40%",
+    opacity: 1,
+    scale: 1.2,
+    rotate: -180,
+    ease: "power2.out"
+  }) 
+  .to(".animated-element", { 
+    rotate: 0,
+    opacity: 0,
+    top: "30%", 
+    right: "80%", 
+    scale: 1.4,
+    duration: 2,
+    ease: "power3.inOut"
+  })
+  .to(".animated-element", { 
+    opacity: 1,
+    top: "20%", 
+    right: "20%",
+    scale: 1,
+    rotate: 180,
+    duration: 2,
+    ease: "elastic.out(1, 0.5)"
+  })
+  .to(".animated-element", { 
+    top: "85%",
+    right: "10%",
+    scale: 1.5,
+    rotate: 270,
+    duration: 2,
+    ease: "back.inOut(2)"
+  })
+  .to(".animated-element", { 
+    top: "50%", 
+    right: "80%", 
+    scale: 1,
+    rotate: 360,
+    duration: 2,
+    ease: "power2.out"
+  })
+  .to(".animated-element", {
+    rotate: 480,
+    duration: 2,
+    ease: "power2.out"
+  })
+  .to(".animated-element", {
+    rotate: 600,
+    duration: 2,
+    ease: "power2.out"
+  });
+}
 
 const qualityMattersEl1 = document.getElementById("quality-matters-el1");
 const aboutSection = document.getElementById("about");
@@ -195,7 +200,7 @@ gsap.to(videoOverlays[1], {
     end: "35% center",
     scrub: 3,
     onEnter: () => {
-      document.querySelector("#worldWideDomination-container video").setAttribute( "autoplay", "true" )
+      document.querySelector("#worldWideDomination-container video")?.setAttribute( "autoplay", "true" )
     },
     onEnterBack: () => {
       // globalPresenceText.style.display= "block";
@@ -209,41 +214,50 @@ gsap.to(videoOverlays[1], {
 });
 
 const centerEl = document.querySelector("#center-el");
+const roadmapSection = document.querySelector('#roadmap');
 
-gsap.to(centerEl, {
-  y: "250vh",
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#roadmap",
-    start: "top top",
-    end: "bottom bottom",
-    scrub: 3
-  }
-});
+if(roadmapSection){
+  gsap.to(centerEl, {
+    y: "250vh",
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#roadmap",
+      start: "top top",
+      end: "bottom bottom",
+      scrub: 3
+    }
+  });
+}
 
 
 // About Section Animations
 
-gsap.to("#chokoChunk", {
-  scrollTrigger: {
-    trigger: "#about",
-    start: "top 25%",
-    end: "25% 25%",
-    scrub: 3,
-  },
-  left: "100%",
-  ease: "none",
-  rotate: -360
-});
+const chokoChunk = document.querySelector('#chokoChunk');
+if(chokoChunk){
+  gsap.to("#chokoChunk", {
+    scrollTrigger: {
+      trigger: "#about",
+      start: "top 25%",
+      end: "25% 25%",
+      scrub: 3,
+    },
+    left: "100%",
+    ease: "none",
+    rotate: -360
+  });
+}
 
-gsap.to("#toon1", {
-  scrollTrigger: {
-    trigger: "#about",
-    start: "center 20%",
-    end: "bottom 40%",
-    scrub: 3
-  },
-  right: "90%",
-  ease: "none",
-  rotate: 40
-});
+const toon1 = document.querySelector('toon1');
+if(toon1){
+  gsap.to("#toon1", {
+    scrollTrigger: {
+      trigger: "#about",
+      start: "center 20%",
+      end: "bottom 40%",
+      scrub: 3
+    },
+    right: "90%",
+    ease: "none",
+    rotate: 40
+  });
+}

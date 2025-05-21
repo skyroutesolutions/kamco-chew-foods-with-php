@@ -1,811 +1,1374 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kamco Chew Foods</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/images/kamco-logo-version2.svg"
+    />
+    <meta
+      name="description"
+      content="More than just a treat, Taste the pinnacle of flavour"
+    />
+    <meta
+      name="keywords"
+      content="crypto, crypto ico, cryptocurrency, digital currency, ico, ico agency, ico crypto, ico landing page, ico token, meme coin, meme ico exchange, meme token, memecoin"
+    />
+    <meta name="theme-color" content="#f56ca7" />
 
-<head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Kamco Chew Foods</title>
-      <link rel="icon" type="image/png" href="../assets/images/kamco-logo-version2.svg" />
-      <meta name="description" content="More than just a treat, Taste the pinnacle of flavour">
-      <meta name="keywords"
-            content="crypto, crypto ico, cryptocurrency, digital currency, ico, ico agency, ico crypto, ico landing page, ico token, meme coin, meme ico exchange, meme token, memecoin">
-      <meta name="theme-color" content="#f56ca7">
+    <!-- Open Graph Tags -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kamco Chew Foods" />
+    <meta
+      property="og:description"
+      content="More than just a treat, Taste the pinnacle of flavour"
+    />
+    <meta property="og:site_name" content="Kamco Chew Foods" />
+    <meta property="og:image" content="./assets/images/common/seo-image.jpg" />
+    <meta property="og:image:width" content="1180" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:image:type" content="image/png" />
 
-      <!-- Open Graph Tags -->
-      <meta property="og:locale" content="en_US">
-      <meta property="og:type" content="website">
-      <meta property="og:title" content="Kamco Chew Foods">
-      <meta property="og:description" content="More than just a treat, Taste the pinnacle of flavour">
-      <meta property="og:site_name" content="Kamco Chew Foods">
-      <meta property="og:image" content="./assets/images/common/seo-image.jpg">
-      <meta property="og:image:width" content="1180">
-      <meta property="og:image:height" content="600">
-      <meta property="og:image:type" content="image/png">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kamco Chew Foods" />
+    <meta
+      name="twitter:description"
+      content="More than just a treat, Taste the pinnacle of flavour"
+    />
+    <meta name="twitter:image" content="./assets/images/common/seo-image.jpg" />
 
-      <!-- Twitter Card Tags -->
-      <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:title" content="Kamco Chew Foods">
-      <meta name="twitter:description" content="More than just a treat, Taste the pinnacle of flavour">
-      <meta name="twitter:image" content="./assets/images/common/seo-image.jpg">
+    <!-- preload head styles -->
+    <link rel="preload" href="../assets/css/unicons.min.css" as="style" />
+    <link rel="preload" href="../assets/css/swiper-bundle.min.css" as="style" />
+    <link rel="preload" href="../assets/css/magic-cursor.min.css" as="style" />
 
+    <!-- preload footer scripts -->
+    <link rel="preload" href="../assets/js/libs/jquery.min.js" as="script" />
+    <link
+      rel="preload"
+      href="../assets/js/libs/scrollmagic.min.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="../assets/js/libs/swiper-bundle.min.js"
+      as="script"
+    />
+    <link rel="preload" href="../assets/js/libs/anime.min.js" as="script" />
+    <link rel="preload" href="../assets/js/libs/typed.min.js" as="script" />
+    <link rel="preload" href="../assets/js/libs/tilt.min.js" as="script" />
+    <link
+      rel="preload"
+      href="../assets/js/libs/split-type.min.js"
+      as="script"
+    />
+    <link rel="preload" href="../assets/js/libs/prettify.min.js" as="script" />
+    <link rel="preload" href="../assets/js/libs/gsap.min.js" as="script" />
+    <link rel="preload" href="../assets/js/core/magic-cursor.js" as="script" />
+    <link
+      rel="preload"
+      href="../assets/js/helpers/data-attr-helper.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="../assets/js/helpers/swiper-helper.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="../assets/js/helpers/splitype-helper.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="../assets/js/helpers/anime-helper.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="../assets/js/helpers/typed-helper.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="../assets/js/helpers/tilt-helper.js"
+      as="script"
+    />
+    <link rel="preload" href="../assets/js/core/marquee.js" as="script" />
+    <link
+      rel="preload"
+      href="../assets/js/uikit-components-bs.js"
+      as="script"
+    />
+    <link rel="preload" href="../assets/js/app.js" as="script" />
 
-      <!-- preload head styles -->
-      <link rel="preload" href="../assets/css/unicons.min.css" as="style">
-      <link rel="preload" href="../assets/css/swiper-bundle.min.css" as="style">
-      <link rel="preload" href="../assets/css/magic-cursor.min.css" as="style">
+    <!-- app head for bootstrap core -->
+    <script src="../assets/js/app-head-bs.js"></script>
 
-      <!-- preload footer scripts -->
-      <link rel="preload" href="../assets/js/libs/jquery.min.js" as="script">
-      <link rel="preload" href="../assets/js/libs/scrollmagic.min.js" as="script">
-      <link rel="preload" href="../assets/js/libs/swiper-bundle.min.js" as="script">
-      <link rel="preload" href="../assets/js/libs/anime.min.js" as="script">
-      <link rel="preload" href="../assets/js/libs/typed.min.js" as="script">
-      <link rel="preload" href="../assets/js/libs/tilt.min.js" as="script">
-      <link rel="preload" href="../assets/js/libs/split-type.min.js" as="script">
-      <link rel="preload" href="../assets/js/libs/prettify.min.js" as="script">
-      <link rel="preload" href="../assets/js/libs/gsap.min.js" as="script">
-      <link rel="preload" href="../assets/js/core/magic-cursor.js" as="script">
-      <link rel="preload" href="../assets/js/helpers/data-attr-helper.js" as="script">
-      <link rel="preload" href="../assets/js/helpers/swiper-helper.js" as="script">
-      <link rel="preload" href="../assets/js/helpers/splitype-helper.js" as="script">
-      <link rel="preload" href="../assets/js/helpers/anime-helper.js" as="script">
-      <link rel="preload" href="../assets/js/helpers/typed-helper.js" as="script">
-      <link rel="preload" href="../assets/js/helpers/tilt-helper.js" as="script">
-      <link rel="preload" href="../assets/js/core/marquee.js" as="script">
-      <link rel="preload" href="../assets/js/uikit-components-bs.js" as="script">
-      <link rel="preload" href="../assets/js/app.js" as="script">
+    <!-- include uni-core components -->
+    <link rel="stylesheet" href="../assets/js/uni-core/css/uni-core.min.css" />
 
-      <!-- app head for bootstrap core -->
-      <script src="../assets/js/app-head-bs.js"></script>
+    <!-- include styles -->
+    <link rel="stylesheet" href="../assets/css/unicons.min.css" />
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../assets/css/prettify.min.css" />
+    <link rel="stylesheet" href="../assets/css/magic-cursor.min.css" />
 
-      <!-- include uni-core components -->
-      <link rel="stylesheet" href="../assets/js/uni-core/css/uni-core.min.css">
+    <!-- include main style -->
+    <link rel="stylesheet" href="../assets/css/theme/theme-two.min.purge.css" />
 
-      <!-- include styles -->
-      <link rel="stylesheet" href="../assets/css/unicons.min.css">
-      <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
-      <link rel="stylesheet" href="../assets/css/prettify.min.css">
-      <link rel="stylesheet" href="../assets/css/magic-cursor.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/about.css" />
+    <!-- include scripts -->
+    <script src="../assets/js/uni-core/js/uni-core-bundle.min.js"></script>
+  </head>
 
-      <!-- include main style -->
-      <link rel="stylesheet" href="../assets/css/theme/theme-two.min.purge.css">
-
-      <link rel="stylesheet" href="../assets/css/style.css">
-      <link rel="stylesheet" href="../assets/css/about.css">
-      <!-- include scripts -->
-      <script src="../assets/js/uni-core/js/uni-core-bundle.min.js"></script>
-</head>
-
-<body class="uni-body panel uni-body panel bg-white text-black overflow-x-hidden disable-cursor">
-
-      <!--  Menu panel -->
-      <div id="uc-menu-panel" data-uc-offcanvas="overlay: true;">
-            <div
-                  class="uc-offcanvas-bar m-1 rounded-2 border border-2 border-black contrast-shadow-md bg-secondary-200 text-dark dark:bg-gray-900 dark:text-white">
-                  <header class="uc-offcanvas-header hstack justify-between items-center pb-2">
-                        <div class="uc-logo">
-                              <a href="../index" class="h5 text-none text-gray-900 dark:text-white">
-                                    <img class="w-50px" src="../assets/images/kamco-logo-version1.svg"
-                                          alt="Kamco Chew Foods">
-                              </a>
-                        </div>
-                        <button
-                              class="uc-offcanvas-close rtl:end-auto rtl:start-0 m-1 mt-2 p-0 btn border-0 dark:text-white dark:text-opacity-50 hover:text-primary hover:rotate-90 duration-150 transition-all"
-                              type="button">
-                              <img class="icon icon-3"
-                                    src="../assets/images/icons/close.svg" alt="close"
-                                    data-uc-svg>
-                        </button>
-                  </header>
-
-                  <div class="panel">
-                        <ul class="nav-y gap-narrow fw-medium fs-6" data-uc-nav>
-                              <li><a href="../index">Home</a></li>
-                              <li><a href="about">About us</a></li>
-                              <li>
-                                    <a href="#" onclick="showProductsDropDown()">
-                                          <span>Our Products</span>
-                                          <img src="../assets/images/icons/image.webp" width="16" alt="">
-                                    </a>
-                              </li>
-                              <ul class="menu-panel-products-dropdown"
-                                    style="padding-left: 14px; display: none; line-height: 30px;">
-                                    <li><a href="shop">All Products</a></li>
-                                    <li><a href="shop?category=chocolate">Chocolates</a></li>
-                                    <li><a href="shop?category=bundles">Bundles</a></li>
-                                    <li><a href="shop?category=offers">Offers</a></li>
-                              </ul>
-                              <li><a href="blogs">Blogs</a></li>
-                              <li>
-                                    <a href="#" onclick="showCatalogueDropDown()">
-                                          <span>Catalogue</span>
-                                          <img src="../assets/images/icons/image.webp" width="16" alt="">
-                                    </a>
-                              </li>
-                              <ul class="menu-panel-catalogues-dropdown"
-                                    style="padding-left: 14px; display: none; line-height: 30px;">
-                                    <li><a href="./assets/catalogues/A_BUBBLE GUM & CHEWING GUM.pdf"
-                                                download="A_BUBBLE GUM & CHEWING GUM.pdf">Bubble Gum & Chewing Gum</a>
-                                    </li>
-                                    <li><a href="../assets/catalogues/B_MOULDED CHOCOLATE & MILK.pdf"
-                                                download="B_MOULDED CHOCOLATE & MILK.pdf">Moulded Chocolate & Milk</a>
-                                    </li>
-                                    <li><a href="../assets/catalogues/C_LIQUID CHOCOLATES & MILK.pdf"
-                                                download="C_LIQUID CHOCOLATES & MILK.pdf">Liquid Chocolates & Milk</a>
-                                    </li>
-                                    <li><a href="../assets/catalogues/D_GEMS & CHOCO BEANS.pdf"
-                                                download="D_GEMS & CHOCO BEANS.pdf">Gems & Choco Beans</a></li>
-                                    <li><a href="../assets/catalogues/E_GOLD_COIN.pdf" download="E_GOLD_COIN.pdf">Gold
-                                                Coin</a></li>
-                                    <li><a href="../assets/catalogues/F_CAKE.pdf" download="F_CAKE.pdf">Cake</a></li>
-                                    <li><a href="../assets/catalogues/FRYUMS.pdf" download="FRYUMS.pdf">Fryums</a></li>
-                                    <li><a href="../assets/catalogues/G_CC_STICKS.pdf" download="G_CC_STICKS.pdf">Cc
-                                                Sticks</a></li>
-                                    <li><a href="../assets/catalogues/H_BISCUITS.pdf"
-                                                download="H_BISCUITS.pdf">Biscuits</a></li>
-                                    <li><a href="../assets/catalogues/I_CHOCOLATE COATED BISCUITS.pdf"
-                                                download="I_CHOCOLATE COATED BISCUITS.pdf">Chocolate Coated Biscuits</a>
-                                    </li>
-                                    <li><a href="../assets/catalogues/J_TOYS&KHAJANA.pdf"
-                                                download="J_TOYS&KHAJANA.pdf">Toys & Khajana</a></li>
-                                    <li><a href="../assets/catalogues/K_WAFFER & CREME STICK.pdf"
-                                                download="K_WAFFER & CREME STICK.pdf">Waffer & Creme Stick</a></li>
-                                    <li><a href="../assets/catalogues/KAMCO SWEETS.pdf"
-                                                download="KAMCO SWEETS.pdf">Kamco Sweets</a></li>
-                                    <li><a href="../assets/catalogues/L_TOFFEE.pdf" download="L_TOFFEE.pdf">Toffee</a>
-                                    </li>
-                                    <li><a href="../assets/catalogues/M_FRUIT BALL.pdf"
-                                                download="M_FRUIT BALL.pdf">Fruit Ball</a></li>
-                                    <li><a href="../assets/catalogues/Moulded jelly 2024.pdf"
-                                                download="Moulded jelly 2024.pdf">Moulded Jelly 2024</a></li>
-                                    <li><a href="../assets/catalogues/N_LIQUID_JELLY_CUPS.pdf"
-                                                download="N_LIQUID_JELLY_CUPS.pdf">Liquid Jelly Cups</a></li>
-                                    <li><a href="../assets/catalogues/P_ALL_DIBBI_ITEMS.pdf"
-                                                download="P_ALL_DIBBI_ITEMS.pdf">All Dibbi Items</a></li>
-                                    <li><a href="../assets/catalogues/Q_TAMARIND PASTE.pdf"
-                                                download="Q_TAMARIND PASTE.pdf">Tamarind Paste</a></li>
-                                    <li><a href="../assets/catalogues/R_COCONUTS.pdf"
-                                                download="R_COCONUTS.pdf">Coconuts</a></li>
-                                    <li><a href="../assets/catalogues/S_LOLLIPOP.pdf"
-                                                download="S_LOLLIPOP.pdf">Lollipop</a></li>
-                                    <li><a href="../assets/catalogues/T_4_JOLLY_JELLY.pdf"
-                                                download="T_4_JOLLY_JELLY.pdf">4 Jolly Jelly</a></li>
-                                    <li><a href="../assets/catalogues/U_CANDY(Sugar Boiled Candy).pdf"
-                                                download="U_CANDY(Sugar Boiled Candy).pdf">Candy (Sugar Boiled
-                                                Candy)</a></li>
-                                    <li><a href="../assets/catalogues/V_CHOCO_CONE.pdf"
-                                                download="V_CHOCO_CONE.pdf">Choco Cone</a></li>
-                                    <li><a href="../assets/catalogues/W_Mouth_Freshner.pdf"
-                                                download="W_Mouth_Freshner.pdf">Mouth Freshner</a></li>
-                                    <li><a href="../assets/catalogues/X_SOFT DRINK&JALJEERA.pdf"
-                                                download="X_SOFT DRINK&JALJEERA.pdf">Soft Drink & Jaljeera</a></li>
-                              </ul>
-                              <li class="hr opacity-10 my-1"></li>
-                        </ul>
-                        <a style="background-color: #E31E23; color: #fff; font-family: aeonik;"
-                              class="btn btn-sm xl:btn-md btn-secondary border border-2 border-black contrast-shadow-sm -rotate-2 hover:rotate-0 lg:d-inline-flex"
-                              href="contact">
-                              <span>Get in touch</span>
-                        </a>
-                        <ul class="nav-x gap-1 mt-4">
-                              <li>
-                                    <a class="w-32px hover:-rotate-3"
-                                          href="https://www.facebook.com/p/Kamco-Chew-Foods-100063781970067"><img
-                                                src="https://html.reactheme.com/muchwow/assets/images/common/facebook.svg"
-                                                alt="facebook"></a>
-                              </li>
-                              <li>
-                                    <a class="w-32px hover:-rotate-3"
-                                          href="https://www.instagram.com/kamcochewfoods/?hl=en"><img
-                                                src="https://cdn-icons-png.flaticon.com/512/2111/2111421.png"
-                                                alt="instagram"></a>
-                              </li>
-                              <li>
-                                    <a class="w-32px hover:-rotate-3"
-                                          href="https://www.youtube.com/@kamcochewfoods2106"><img
-                                                src="https://html.reactheme.com/muchwow/assets/images/common/youtube.svg"
-                                                alt="youtube"></a>
-                              </li>
-                              <li>
-                                    <a class="w-32px hover:-rotate-3"
-                                          href="https://www.linkedin.com/company/kamco-chew-food-private-limited/"><img
-                                                src="https://live.staticflickr.com/8296/7749079740_113c14cc98_w.jpg"
-                                                alt="twitter"></a>
-                              </li>
-                        </ul>
-                  </div>
-            </div>
-      </div>
-
-      <!--  Bottom Actions Sticky -->
-      <div class="backtotop-wrap position-fixed bottom-0 end-0 z-99 m-2 vstack">
-            <a style="background-color: #E31E23;"
-                  class="btn btn-sm p-0 text-black border border-2 border-black contrast-shadow-sm w-48px h-48px rounded-circle"
-                  href="to_top" data-uc-backtotop>
-                  <img class="icon icon-3" src="../assets/images/icons/chevron-up.svg"
-                        alt="to-top" data-uc-svg>
+  <body
+    class="uni-body panel uni-body panel bg-white text-black overflow-x-hidden disable-cursor"
+  >
+    <!--  Menu panel -->
+    <div id="uc-menu-panel" data-uc-offcanvas="overlay: true;">
+      <div
+        class="uc-offcanvas-bar m-1 rounded-2 border border-2 border-black contrast-shadow-md bg-secondary-200 text-dark dark:bg-gray-900 dark:text-white"
+      >
+        <header
+          class="uc-offcanvas-header hstack justify-between items-center pb-2"
+        >
+          <div class="uc-logo">
+            <a
+              href="../index"
+              class="h5 text-none text-gray-900 dark:text-white"
+            >
+              <img
+                class="w-50px"
+                src="../assets/images/kamco-logo-version1.svg"
+                alt="Kamco Chew Foods"
+              />
             </a>
+          </div>
+          <button
+            class="uc-offcanvas-close rtl:end-auto rtl:start-0 m-1 mt-2 p-0 btn border-0 dark:text-white dark:text-opacity-50 hover:text-primary hover:rotate-90 duration-150 transition-all"
+            type="button"
+          >
+            <img
+              class="icon icon-3"
+              src="../assets/images/icons/close.svg"
+              alt="close"
+              data-uc-svg
+            />
+          </button>
+        </header>
+
+        <div class="panel">
+          <ul class="nav-y gap-narrow fw-medium fs-6" data-uc-nav>
+            <li><a href="../index">Home</a></li>
+            <li><a href="about">About us</a></li>
+            <li>
+              <a href="#" onclick="showProductsDropDown()">
+                <span>Our Products</span>
+                <img
+                  src="../assets/images/icons/image.webp"
+                  width="16"
+                  alt=""
+                />
+              </a>
+            </li>
+            <ul
+              class="menu-panel-products-dropdown"
+              style="padding-left: 14px; display: none; line-height: 30px"
+            >
+              <li><a href="shop">All Products</a></li>
+              <li><a href="shop?category=chocolate">Chocolates</a></li>
+              <li><a href="shop?category=bundles">Bundles</a></li>
+              <li><a href="shop?category=offers">Offers</a></li>
+            </ul>
+            <li><a href="blogs">Blogs</a></li>
+            <li>
+              <a href="#" onclick="showCatalogueDropDown()">
+                <span>Catalogue</span>
+                <img
+                  src="../assets/images/icons/image.webp"
+                  width="16"
+                  alt=""
+                />
+              </a>
+            </li>
+            <ul
+              class="menu-panel-catalogues-dropdown"
+              style="padding-left: 14px; display: none; line-height: 30px"
+            >
+              <li>
+                <a
+                  href="./assets/catalogues/A_BUBBLE GUM & CHEWING GUM.pdf"
+                  download="A_BUBBLE GUM & CHEWING GUM.pdf"
+                  >Bubble Gum & Chewing Gum</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/catalogues/B_MOULDED CHOCOLATE & MILK.pdf"
+                  download="B_MOULDED CHOCOLATE & MILK.pdf"
+                  >Moulded Chocolate & Milk</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/catalogues/C_LIQUID CHOCOLATES & MILK.pdf"
+                  download="C_LIQUID CHOCOLATES & MILK.pdf"
+                  >Liquid Chocolates & Milk</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/catalogues/D_GEMS & CHOCO BEANS.pdf"
+                  download="D_GEMS & CHOCO BEANS.pdf"
+                  >Gems & Choco Beans</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/catalogues/E_GOLD_COIN.pdf"
+                  download="E_GOLD_COIN.pdf"
+                  >Gold Coin</a
+                >
+              </li>
+              <li>
+                <a href="../assets/catalogues/F_CAKE.pdf" download="F_CAKE.pdf"
+                  >Cake</a
+                >
+              </li>
+              <li>
+                <a href="../assets/catalogues/FRYUMS.pdf" download="FRYUMS.pdf"
+                  >Fryums</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/catalogues/G_CC_STICKS.pdf"
+                  download="G_CC_STICKS.pdf"
+                  >Cc Sticks</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/catalogues/H_BISCUITS.pdf"
+                  download="H_BISCUITS.pdf"
+                  >Biscuits</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/catalogues/I_CHOCOLATE COATED BISCUITS.pdf"
+                  download="I_CHOCOLATE COATED BISCUITS.pdf"
+                  >Chocolate Coated Biscuits</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/catalogues/J_TOYS&KHAJANA.pdf"
+                  download="J_TOYS&KHAJANA.pdf"
+                  >Toys & Khajana</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/catalogues/K_WAFFER & CREME STICK.pdf"
+                  download="K_WAFFER & CREME STICK.pdf"
+                  >Waffer & Creme Stick</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/catalogues/KAMCO SWEETS.pdf"
+                  download="KAMCO SWEETS.pdf"
+                  >Kamco Sweets</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/catalogues/L_TOFFEE.pdf"
+                  download="L_TOFFEE.pdf"
+                  >Toffee</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/catalogues/M_FRUIT BALL.pdf"
+                  download="M_FRUIT BALL.pdf"
+                  >Fruit Ball</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/catalogues/Moulded jelly 2024.pdf"
+                  download="Moulded jelly 2024.pdf"
+                  >Moulded Jelly 2024</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/catalogues/N_LIQUID_JELLY_CUPS.pdf"
+                  download="N_LIQUID_JELLY_CUPS.pdf"
+                  >Liquid Jelly Cups</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/catalogues/P_ALL_DIBBI_ITEMS.pdf"
+                  download="P_ALL_DIBBI_ITEMS.pdf"
+                  >All Dibbi Items</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/catalogues/Q_TAMARIND PASTE.pdf"
+                  download="Q_TAMARIND PASTE.pdf"
+                  >Tamarind Paste</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/catalogues/R_COCONUTS.pdf"
+                  download="R_COCONUTS.pdf"
+                  >Coconuts</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/catalogues/S_LOLLIPOP.pdf"
+                  download="S_LOLLIPOP.pdf"
+                  >Lollipop</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/catalogues/T_4_JOLLY_JELLY.pdf"
+                  download="T_4_JOLLY_JELLY.pdf"
+                  >4 Jolly Jelly</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/catalogues/U_CANDY(Sugar Boiled Candy).pdf"
+                  download="U_CANDY(Sugar Boiled Candy).pdf"
+                  >Candy (Sugar Boiled Candy)</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/catalogues/V_CHOCO_CONE.pdf"
+                  download="V_CHOCO_CONE.pdf"
+                  >Choco Cone</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/catalogues/W_Mouth_Freshner.pdf"
+                  download="W_Mouth_Freshner.pdf"
+                  >Mouth Freshner</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/catalogues/X_SOFT DRINK&JALJEERA.pdf"
+                  download="X_SOFT DRINK&JALJEERA.pdf"
+                  >Soft Drink & Jaljeera</a
+                >
+              </li>
+            </ul>
+            <li class="hr opacity-10 my-1"></li>
+          </ul>
+          <a
+            style="background-color: #e31e23; color: #fff; font-family: aeonik"
+            class="btn btn-sm xl:btn-md btn-secondary border border-2 border-black contrast-shadow-sm -rotate-2 hover:rotate-0 lg:d-inline-flex"
+            href="contact"
+          >
+            <span>Get in touch</span>
+          </a>
+          <ul class="nav-x gap-1 mt-4">
+            <li>
+              <a
+                class="w-32px hover:-rotate-3"
+                href="https://www.facebook.com/p/Kamco-Chew-Foods-100063781970067"
+                ><img
+                  src="https://html.reactheme.com/muchwow/assets/images/common/facebook.svg"
+                  alt="facebook"
+              /></a>
+            </li>
+            <li>
+              <a
+                class="w-32px hover:-rotate-3"
+                href="https://www.instagram.com/kamcochewfoods/?hl=en"
+                ><img
+                  src="https://cdn-icons-png.flaticon.com/512/2111/2111421.png"
+                  alt="instagram"
+              /></a>
+            </li>
+            <li>
+              <a
+                class="w-32px hover:-rotate-3"
+                href="https://www.youtube.com/@kamcochewfoods2106"
+                ><img
+                  src="https://html.reactheme.com/muchwow/assets/images/common/youtube.svg"
+                  alt="youtube"
+              /></a>
+            </li>
+            <li>
+              <a
+                class="w-32px hover:-rotate-3"
+                href="https://www.linkedin.com/company/kamco-chew-food-private-limited/"
+                ><img
+                  src="https://live.staticflickr.com/8296/7749079740_113c14cc98_w.jpg"
+                  alt="twitter"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!--  Bottom Actions Sticky -->
+    <div class="backtotop-wrap position-fixed bottom-0 end-0 z-99 m-2 vstack">
+      <a
+        style="background-color: #e31e23"
+        class="btn btn-sm p-0 text-black border border-2 border-black contrast-shadow-sm w-48px h-48px rounded-circle"
+        href="to_top"
+        data-uc-backtotop
+      >
+        <img
+          class="icon icon-3"
+          src="../assets/images/icons/chevron-up.svg"
+          alt="to-top"
+          data-uc-svg
+        />
+      </a>
+    </div>
+
+    <!-- Header start -->
+    <header id="header-container" class="uc-header header-two z-999 uc-dark">
+      <nav
+        class="uc-navbar-container bg-transparent mt-3 xl:mt-4 uc-navbar-float ft-tertiary z-1"
+        data-anime="translateY: [-40, 0]; opacity: [0, 1]; duration: 750; delay: 0;"
+      >
+        <div class="uc-navbar-main" style="--uc-nav-height: 100px">
+          <div class="container">
+            <div
+              style="
+                background-color: #e31e23;
+                backdrop-filter: blur(5px);
+                padding: 10px;
+              "
+              class="uc-navbar min-h-64px lg:min-h-80px xl:min-h-100px ps-2 pe-1 lg:px-4 border border-2 border-black contrast-shadow-md rounded-2 lg:rounded-3"
+              data-uc-navbar=" animation: uc-animation-slide-top-small; duration: 150;"
+            >
+              <div class="uc-navbar-left">
+                <div class="uc-logo">
+                  <a class="panel text-none w-150px xl:w-auto" href="../index">
+                    <img
+                      src="../assets/images/kamco-logo-version2.svg"
+                      style="
+                        height: 80px;
+                        filter: drop-shadow(
+                          0px 0px 10px rgba(255, 255, 255, 0.492)
+                        );
+                      "
+                      alt="Kamco Chew Foods"
+                    />
+                  </a>
+                </div>
+              </div>
+              <div class="uc-navbar-center">
+                <ul
+                  style="color: white; font-family: aeonik"
+                  class="uc-navbar-nav fs-5 xl:fs-4 gap-3 lg:gap-4 d-none lg:d-flex fw-semibold"
+                  data-uc-scrollspy-nav="closet: > *; offset: 48; scroll: true;"
+                >
+                  <li><a href="../index">Home</a></li>
+                  <li><a href="about">About us</a></li>
+
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                      Our Products
+                      <img
+                        src="../assets/images/icons/down.webp"
+                        width="18"
+                        alt=""
+                      />
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="shop">All Products</a></li>
+                      <li><a href="shop?category=chocolate">Chocolates</a></li>
+                      <li><a href="shop?category=bundles">Bundles</a></li>
+                      <li><a href="shop?category=offers">Offers</a></li>
+                    </ul>
+                  </li>
+
+                  <li><a href="blogs">Blogs</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="catalogueDropdown-toggle">
+                      Catalogue
+                      <img
+                        src="../assets/images/icons/down.webp"
+                        width="18"
+                        alt=""
+                      />
+                    </a>
+                    <ul class="catalogueDropdown-menu">
+                      <li>
+                        <a
+                          href="../assets/catalogues/A_BUBBLE GUM & CHEWING GUM.pdf"
+                          download="A_BUBBLE GUM & CHEWING GUM.pdf"
+                          >Bubble Gum & Chewing Gum</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/B_MOULDED CHOCOLATE & MILK.pdf"
+                          download="B_MOULDED CHOCOLATE & MILK.pdf"
+                          >Moulded Chocolate & Milk</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/C_LIQUID CHOCOLATES & MILK.pdf"
+                          download="C_LIQUID CHOCOLATES & MILK.pdf"
+                          >Liquid Chocolates & Milk</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/D_GEMS & CHOCO BEANS.pdf"
+                          download="D_GEMS & CHOCO BEANS.pdf"
+                          >Gems & Choco Beans</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/E_GOLD_COIN.pdf"
+                          download="E_GOLD_COIN.pdf"
+                          >Gold Coin</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/F_CAKE.pdf"
+                          download="F_CAKE.pdf"
+                          >Cake</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/FRYUMS.pdf"
+                          download="FRYUMS.pdf"
+                          >Fryums</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/G_CC_STICKS.pdf"
+                          download="G_CC_STICKS.pdf"
+                          >Cc Sticks</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/H_BISCUITS.pdf"
+                          download="H_BISCUITS.pdf"
+                          >Biscuits</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/I_CHOCOLATE COATED BISCUITS.pdf"
+                          download="I_CHOCOLATE COATED BISCUITS.pdf"
+                          >Chocolate Coated Biscuits</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/J_TOYS&KHAJANA.pdf"
+                          download="J_TOYS&KHAJANA.pdf"
+                          >Toys & Khajana</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/K_WAFFER & CREME STICK.pdf"
+                          download="K_WAFFER & CREME STICK.pdf"
+                          >Waffer & Creme Stick</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/KAMCO SWEETS.pdf"
+                          download="KAMCO SWEETS.pdf"
+                          >Kamco Sweets</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/L_TOFFEE.pdf"
+                          download="L_TOFFEE.pdf"
+                          >Toffee</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/M_FRUIT BALL.pdf"
+                          download="M_FRUIT BALL.pdf"
+                          >Fruit Ball</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/Moulded jelly 2024.pdf"
+                          download="Moulded jelly 2024.pdf"
+                          >Moulded Jelly 2024</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/N_LIQUID_JELLY_CUPS.pdf"
+                          download="N_LIQUID_JELLY_CUPS.pdf"
+                          >Liquid Jelly Cups</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/P_ALL_DIBBI_ITEMS.pdf"
+                          download="P_ALL_DIBBI_ITEMS.pdf"
+                          >All Dibbi Items</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/Q_TAMARIND PASTE.pdf"
+                          download="Q_TAMARIND PASTE.pdf"
+                          >Tamarind Paste</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/R_COCONUTS.pdf"
+                          download="R_COCONUTS.pdf"
+                          >Coconuts</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/S_LOLLIPOP.pdf"
+                          download="S_LOLLIPOP.pdf"
+                          >Lollipop</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/T_4_JOLLY_JELLY.pdf"
+                          download="T_4_JOLLY_JELLY.pdf"
+                          >4 Jolly Jelly</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/U_CANDY(Sugar Boiled Candy).pdf"
+                          download="U_CANDY(Sugar Boiled Candy).pdf"
+                          >Candy (Sugar Boiled Candy)</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/V_CHOCO_CONE.pdf"
+                          download="V_CHOCO_CONE.pdf"
+                          >Choco Cone</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/W_Mouth_Freshner.pdf"
+                          download="W_Mouth_Freshner.pdf"
+                          >Mouth Freshner</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../assets/catalogues/X_SOFT DRINK&JALJEERA.pdf"
+                          download="X_SOFT DRINK&JALJEERA.pdf"
+                          >Soft Drink & Jaljeera</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="uc-navbar-right">
+                <a
+                  style="
+                    background-color: white;
+                    color: #e31e23;
+                    font-family: aeonik;
+                  "
+                  class="btn btn-sm xl:btn-md btn-secondary border border-2 border-black contrast-shadow-sm -rotate-2 hover:rotate-0 d-none lg:d-inline-flex"
+                  href="contact"
+                >
+                  <span>Get in touch</span>
+                </a>
+                <a
+                  style="background-color: #f6b149"
+                  class="btn btn-md btn-secondary w-48px h-48px p-0 border border-2 border-black contrast-shadow-sm d-inline-flex lg:d-none"
+                  href="#uc-menu-panel"
+                  data-uc-toggle
+                >
+                  <img
+                    class="icon icon-3"
+                    src="../assets/images/icons/menu.svg"
+                    alt="menu"
+                    data-uc-svg
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Header end -->
+
+    <!-- Wrapper start -->
+    <div id="wrapper" class="wrap">
+      <div id="hero" class="about-us-hero hero section panel overflow-hidden">
+        <div class="about-us-heading">
+          <h2 style="" class="h4 sm:h3 xl:h2 text-uppercase ls-0">About Us</h2>
+          <br />
+        </div>
+
+        <div class="hero-bg">
+          <img
+            style="background-position: center"
+            src="../assets/images/Vision.webp"
+            alt="victor"
+          />
+        </div>
       </div>
 
-      <!-- Header start -->
-      <header id="header-container" class="uc-header header-two z-999 uc-dark">
-            <nav class="uc-navbar-container bg-transparent mt-3 xl:mt-4 uc-navbar-float ft-tertiary z-1"
-                  data-anime="translateY: [-40, 0]; opacity: [0, 1]; duration: 750; delay: 0;">
-                  <div class="uc-navbar-main" style="--uc-nav-height: 100px">
-                        <div class="container">
-                              <div style="background-color: #E31E23; backdrop-filter: blur(5px); padding: 10px;"
-                                    class="uc-navbar min-h-64px lg:min-h-80px xl:min-h-100px ps-2 pe-1 lg:px-4 border border-2 border-black contrast-shadow-md rounded-2 lg:rounded-3"
-                                    data-uc-navbar=" animation: uc-animation-slide-top-small; duration: 150;">
-                                    <div class="uc-navbar-left">
-                                          <div class="uc-logo">
-                                                <a class="panel text-none w-150px xl:w-auto" href="../index">
-                                                      <img src="../assets/images/kamco-logo-version2.svg"
-                                                            style="height: 80px; filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.492));"
-                                                            alt="Kamco Chew Foods">
-                                                </a>
-                                          </div>
-                                    </div>
-                                    <div class="uc-navbar-center">
-                                          <ul style="color: white; font-family: aeonik;"
-                                                class="uc-navbar-nav fs-5 xl:fs-4 gap-3 lg:gap-4 d-none lg:d-flex fw-semibold"
-                                                data-uc-scrollspy-nav="closet: > *; offset: 48; scroll: true;">
-                                                <li><a href="../index">Home</a></li>
-                                                <li><a href="about">About us</a></li>
-
-                                                <li class="dropdown">
-                                                      <a href="#" class="dropdown-toggle">
-                                                            Our Products
-                                                            <img src="../assets/images/icons/down.webp" width="18"
-                                                                  alt="">
-                                                      </a>
-                                                      <ul class="dropdown-menu">
-                                                            <li><a href="shop">All Products</a></li>
-                                                            <li><a href="shop?category=chocolate">Chocolates</a></li>
-                                                            <li><a href="shop?category=bundles">Bundles</a></li>
-                                                            <li><a href="shop?category=offers">Offers</a></li>
-                                                      </ul>
-                                                </li>
-
-                                                <li><a href="blogs">Blogs</a></li>
-                                                <li class="dropdown">
-                                                      <a href="#" class="catalogueDropdown-toggle">
-                                                            Catalogue
-                                                            <img src="../assets/images/icons/down.webp" width="18"
-                                                                  alt="">
-                                                      </a>
-                                                      <ul class="catalogueDropdown-menu">
-                                                            <li><a href="../assets/catalogues/A_BUBBLE GUM & CHEWING GUM.pdf"
-                                                                        download="A_BUBBLE GUM & CHEWING GUM.pdf">Bubble
-                                                                        Gum & Chewing Gum</a></li>
-                                                            <li><a href="../assets/catalogues/B_MOULDED CHOCOLATE & MILK.pdf"
-                                                                        download="B_MOULDED CHOCOLATE & MILK.pdf">Moulded
-                                                                        Chocolate & Milk</a></li>
-                                                            <li><a href="../assets/catalogues/C_LIQUID CHOCOLATES & MILK.pdf"
-                                                                        download="C_LIQUID CHOCOLATES & MILK.pdf">Liquid
-                                                                        Chocolates & Milk</a></li>
-                                                            <li><a href="../assets/catalogues/D_GEMS & CHOCO BEANS.pdf"
-                                                                        download="D_GEMS & CHOCO BEANS.pdf">Gems & Choco
-                                                                        Beans</a></li>
-                                                            <li><a href="../assets/catalogues/E_GOLD_COIN.pdf"
-                                                                        download="E_GOLD_COIN.pdf">Gold Coin</a></li>
-                                                            <li><a href="../assets/catalogues/F_CAKE.pdf"
-                                                                        download="F_CAKE.pdf">Cake</a></li>
-                                                            <li><a href="../assets/catalogues/FRYUMS.pdf"
-                                                                        download="FRYUMS.pdf">Fryums</a></li>
-                                                            <li><a href="../assets/catalogues/G_CC_STICKS.pdf"
-                                                                        download="G_CC_STICKS.pdf">Cc Sticks</a></li>
-                                                            <li><a href="../assets/catalogues/H_BISCUITS.pdf"
-                                                                        download="H_BISCUITS.pdf">Biscuits</a></li>
-                                                            <li><a href="../assets/catalogues/I_CHOCOLATE COATED BISCUITS.pdf"
-                                                                        download="I_CHOCOLATE COATED BISCUITS.pdf">Chocolate
-                                                                        Coated Biscuits</a></li>
-                                                            <li><a href="../assets/catalogues/J_TOYS&KHAJANA.pdf"
-                                                                        download="J_TOYS&KHAJANA.pdf">Toys & Khajana</a>
-                                                            </li>
-                                                            <li><a href="../assets/catalogues/K_WAFFER & CREME STICK.pdf"
-                                                                        download="K_WAFFER & CREME STICK.pdf">Waffer &
-                                                                        Creme Stick</a></li>
-                                                            <li><a href="../assets/catalogues/KAMCO SWEETS.pdf"
-                                                                        download="KAMCO SWEETS.pdf">Kamco Sweets</a>
-                                                            </li>
-                                                            <li><a href="../assets/catalogues/L_TOFFEE.pdf"
-                                                                        download="L_TOFFEE.pdf">Toffee</a></li>
-                                                            <li><a href="../assets/catalogues/M_FRUIT BALL.pdf"
-                                                                        download="M_FRUIT BALL.pdf">Fruit Ball</a></li>
-                                                            <li><a href="../assets/catalogues/Moulded jelly 2024.pdf"
-                                                                        download="Moulded jelly 2024.pdf">Moulded Jelly
-                                                                        2024</a></li>
-                                                            <li><a href="../assets/catalogues/N_LIQUID_JELLY_CUPS.pdf"
-                                                                        download="N_LIQUID_JELLY_CUPS.pdf">Liquid Jelly
-                                                                        Cups</a></li>
-                                                            <li><a href="../assets/catalogues/P_ALL_DIBBI_ITEMS.pdf"
-                                                                        download="P_ALL_DIBBI_ITEMS.pdf">All Dibbi
-                                                                        Items</a></li>
-                                                            <li><a href="../assets/catalogues/Q_TAMARIND PASTE.pdf"
-                                                                        download="Q_TAMARIND PASTE.pdf">Tamarind
-                                                                        Paste</a></li>
-                                                            <li><a href="../assets/catalogues/R_COCONUTS.pdf"
-                                                                        download="R_COCONUTS.pdf">Coconuts</a></li>
-                                                            <li><a href="../assets/catalogues/S_LOLLIPOP.pdf"
-                                                                        download="S_LOLLIPOP.pdf">Lollipop</a></li>
-                                                            <li><a href="../assets/catalogues/T_4_JOLLY_JELLY.pdf"
-                                                                        download="T_4_JOLLY_JELLY.pdf">4 Jolly Jelly</a>
-                                                            </li>
-                                                            <li><a href="../assets/catalogues/U_CANDY(Sugar Boiled Candy).pdf"
-                                                                        download="U_CANDY(Sugar Boiled Candy).pdf">Candy
-                                                                        (Sugar Boiled Candy)</a></li>
-                                                            <li><a href="../assets/catalogues/V_CHOCO_CONE.pdf"
-                                                                        download="V_CHOCO_CONE.pdf">Choco Cone</a></li>
-                                                            <li><a href="../assets/catalogues/W_Mouth_Freshner.pdf"
-                                                                        download="W_Mouth_Freshner.pdf">Mouth
-                                                                        Freshner</a></li>
-                                                            <li><a href="../assets/catalogues/X_SOFT DRINK&JALJEERA.pdf"
-                                                                        download="X_SOFT DRINK&JALJEERA.pdf">Soft Drink
-                                                                        & Jaljeera</a></li>
-                                                      </ul>
-                                                </li>
-                                          </ul>
-                                    </div>
-                                    <div class="uc-navbar-right">
-                                          <a style="background-color: white; color: #E31E23; font-family: aeonik;"
-                                                class="btn btn-sm xl:btn-md btn-secondary border border-2 border-black contrast-shadow-sm -rotate-2 hover:rotate-0 d-none lg:d-inline-flex"
-                                                href="contact">
-                                                <span>Get in touch</span>
-                                          </a>
-                                          <a style="background-color: #F6B149;"
-                                                class="btn btn-md btn-secondary w-48px h-48px p-0 border border-2 border-black contrast-shadow-sm d-inline-flex lg:d-none"
-                                                href="#uc-menu-panel" data-uc-toggle>
-                                                <img class="icon icon-3"
-                                                      src="../assets/images/icons/menu.svg"
-                                                      alt="menu" data-uc-svg>
-                                          </a>
-                                    </div>
-                              </div>
-                        </div>
+      <!-- Section start -->
+      <div id="about" class="about section panel overflow-hidden mt-4">
+        <img
+          id="chokoChunk"
+          src="../assets/images/elements/chokoChunks.webp"
+          alt="victor"
+        />
+        <img
+          id="toon1"
+          src="../assets/images/elements/toon1.webp"
+          alt="victor"
+        />
+        <div class="section-outer panel py-6 sm:py-8 lg:py-9 xl:py-10">
+          <div class="container sm:max-w-lg xl:max-w-2xl">
+            <div class="section-inner panel">
+              <div class="section-content panel">
+                <div
+                  class="row child-cols-12 justify-center items-center g-5 sm:g-7 lg:g-9"
+                  data-anime="onview: -400; targets: >*; translateY: [24, 0]; opacity: [0, 1]; delay: anime.stagger(100, {start: 200});"
+                >
+                  <div class="col-11 sm:col-10 lg:col">
+                    <div
+                      class="about-image panel p-7 border border-2 border-black contrast-shadow-xl text-black -rotate-2"
+                    >
+                      <img
+                        src="../assets/images/about/about-main.webp"
+                        alt="Image"
+                      />
+                    </div>
                   </div>
-            </nav>
-      </header>
-
-      <!-- Header end -->
-
-      <!-- Wrapper start -->
-      <div id="wrapper" class="wrap">
-
-            <div id="hero" class="about-us-hero hero section panel overflow-hidden">
-
-                  <div class="about-us-heading">
-                        <h2 style="" class="h4 sm:h3 xl:h2 text-uppercase ls-0">About Us</h2><br>
+                  <div class="lg:col">
+                    <div
+                      class="about-content vstack items-center gap-3 sm:gap-4 text-center"
+                    >
+                      <p
+                        style="font-family: sergio !important"
+                        class="h5 sm:h3 xl:h2 mb-0 ls-0 text-uppercase"
+                      >
+                        <span style="z-index: 99"
+                          >Crafting Sweet Moments Since
+                          <span
+                            style="
+                              color: #e31e23;
+                              -webkit-text-stroke: 0.5px black;
+                            "
+                            >1998</span
+                          ></span
+                        >
+                      </p>
+                      <div class="desc">
+                        <p
+                          style="font-family: aeonik"
+                          class="fs-6 sm:fs-5 xl:fs-4 mb-2"
+                        >
+                          At Kamco Chew Food Pvt. Ltd., we don’t just make
+                          confectionery — we craft moments of joy, connection,
+                          and nostalgia. Founded in 1998, Kamco began with a
+                          passion for chewing gum and quickly expanded into one
+                          of India’s largest and most diverse confectionery and
+                          bakery manufacturers, creating treats that delight
+                          millions across the globe.
+                        </p>
+                        <p
+                          style="font-family: aeonik"
+                          class="fs-6 sm:fs-5 xl:fs-4"
+                        >
+                          Today, with over 3,000 SKUs and a monthly production
+                          capacity of more than 3,000 tons, Kamco is a symbol of
+                          innovation, quality, and trust in the sweet world of
+                          confections. 🍫✨
+                        </p>
+                      </div>
+                      <div class="buttons hstack justify-center gap-2 xl:gap-3">
+                        <a
+                          style="
+                            background-color: #e31e23;
+                            color: white;
+                            font-family: aeonik;
+                          "
+                          class="btn btn-md xl:btn-2xl btn-secondary px-3 border border-2 border-black contrast-shadow-sm hover:-rotate-2"
+                          href="shop"
+                        >
+                          <span>Discover More</span>
+                        </a>
+                        <a
+                          style="background-color: #fce8e8; color: #e31e23"
+                          class="btn btn-primary-200 w-48px h-48px xl:w-64px xl:h-64px border border-2 border-black contrast-shadow-sm hover:-rotate-2"
+                          href="https://www.instagram.com/kamcochewfoods/?hl=en"
+                        >
+                          <span>
+                            <img
+                              src="../assets/images/elements/instagram.svg"
+                              alt=""
+                            />
+                          </span>
+                        </a>
+                      </div>
+                    </div>
                   </div>
-
-                  <div class="hero-bg">
-                        <img style="background-position: center;" src="../assets/images/Vision.webp" alt="victor">
+                </div>
+              </div>
+              <div
+                class="section-footer mt-6 sm:mt-8 lg:mt-9 xl:mt-10 text-center"
+                data-anime="onview: -200; translateY: [24, 0]; opacity: [0, 1]; delay: 200;"
+              >
+                <div
+                  class="row child-cols-6 sm:child-cols-4 justify-center gx-0 gy-2"
+                >
+                  <div class="col sm:col-4 order-1 sm:order-0">
+                    <h2
+                      style="color: #e31e23; font-family: aeonik !important"
+                      class="counter-container h2 sm:h1 xl:display-6 mb-1 xl:mb-2"
+                    >
+                      <span data-count="27"></span>+
+                    </h2>
+                    <span
+                      style="font-family: aeonik; font-weight: bold"
+                      class="fs-6 sm:fs-5 xl:fs-4"
+                      >Experience</span
+                    >
                   </div>
-
+                  <div class="col sm:col-4 order-1 sm:order-0">
+                    <h2
+                      style="color: #e31e23; font-family: aeonik !important"
+                      class="counter-container h2 sm:h1 xl:display-6 mb-1 xl:mb-2"
+                    >
+                      <span data-count="25"></span>+
+                    </h2>
+                    <span
+                      style="font-family: aeonik; font-weight: bold"
+                      class="fs-6 sm:fs-5 xl:fs-4"
+                      >Countries</span
+                    >
+                  </div>
+                  <div class="order-0">
+                    <h2
+                      style="color: #e31e23; font-family: aeonik !important"
+                      class="counter-container h2 sm:h1 xl:display-6 mb-1 xl:mb-2"
+                    >
+                      <span data-count="100"></span>+
+                    </h2>
+                    <span
+                      style="font-family: aeonik; font-weight: bold"
+                      class="fs-6 sm:fs-5 xl:fs-4"
+                      >International clients</span
+                    >
+                  </div>
+                  <div class="order-0">
+                    <h2
+                      style="color: #e31e23; font-family: aeonik !important"
+                      class="counter-container h2 sm:h1 xl:display-6 mb-1 xl:mb-2"
+                    >
+                      <span data-count="3000"></span>+
+                    </h2>
+                    <span
+                      style="font-family: aeonik; font-weight: bold"
+                      class="fs-6 sm:fs-5 xl:fs-4"
+                      >SKUs</span
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <!-- Section start -->
-            <div id="about" class="about section panel overflow-hidden mt-4">
-                  <img id="chokoChunk" src="../assets/images/elements/chokoChunks.webp" alt="victor">
-                  <img id="toon1" src="../assets/images/elements/toon1.webp" alt="victor">
-                  <div class="section-outer panel py-6 sm:py-8 lg:py-9 xl:py-10">
-
-                        <div class="container sm:max-w-lg xl:max-w-2xl">
-                              <div class="section-inner panel">
-                                    <div class="section-content panel">
-                                          <div class="row child-cols-12 justify-center items-center g-5 sm:g-7 lg:g-9"
-                                                data-anime="onview: -400; targets: >*; translateY: [24, 0]; opacity: [0, 1]; delay: anime.stagger(100, {start: 200});">
-                                                <div class="col-11 sm:col-10 lg:col">
-                                                      <div
-                                                            class="about-image panel p-7 border border-2 border-black contrast-shadow-xl text-black -rotate-2">
-                                                            <img src="../assets/images/about/about-main.webp"
-                                                                  alt="Image">
-                                                      </div>
-                                                </div>
-                                                <div class="lg:col">
-                                                      <div
-                                                            class="about-content vstack items-center gap-3 sm:gap-4 text-center">
-                                                            <p style="font-family: sergio !important;"
-                                                                  class="h5 sm:h3 xl:h2 mb-0 ls-0 text-uppercase">
-                                                                  <span style="z-index: 99;">Crafting Sweet Moments Since <span style="color:#E31E23; -webkit-text-stroke:0.5px black;">1998</span></span>
-                                                            </p>
-                                                            <div class="desc">
-                                                                  <p style="font-family: aeonik;"
-                                                                        class="fs-6 sm:fs-5 xl:fs-4 mb-2">
-                                                                        At Kamco Chew Food Pvt. Ltd., we don’t just make confectionery — we craft moments of joy, connection, and nostalgia.
-                                                                        Founded in 1998, Kamco began with a passion for chewing gum and quickly expanded into one of India’s largest and most
-                                                                        diverse confectionery and bakery manufacturers, creating treats that delight millions across the globe.
-
-                                                                  </p>
-                                                                  <p style="font-family: aeonik;"
-                                                                        class="fs-6 sm:fs-5 xl:fs-4">
-                                                                        Today, with over 3,000 SKUs and a monthly production capacity of more than 3,000 tons, Kamco is a symbol of innovation,
-                                                                        quality, and trust in the sweet world of confections. 🍫✨
-                                                                  </p>
-                                                            </div>
-                                                            <div class="buttons hstack justify-center gap-2 xl:gap-3">
-                                                                  <a style="background-color: #E31E23; color: white; font-family: aeonik;"
-                                                                        class="btn btn-md xl:btn-2xl btn-secondary px-3 border border-2 border-black contrast-shadow-sm hover:-rotate-2"
-                                                                        href="shop">
-                                                                        <span>Discover More</span>
-                                                                  </a>
-                                                                  <a style="background-color: #FCE8E8; color: #E31E23;"
-                                                                        class="btn btn-primary-200 w-48px h-48px xl:w-64px xl:h-64px border border-2 border-black contrast-shadow-sm hover:-rotate-2"
-                                                                        href="https://www.instagram.com/kamcochewfoods/?hl=en">
-                                                                        <span>
-                                                                              <img src="../assets/images/elements/instagram.svg"
-                                                                                    alt="">
-                                                                        </span>
-                                                                  </a>
-                                                            </div>
-                                                      </div>
-                                                </div>
-                                          </div>
-                                    </div>
-                                    <div class="section-footer mt-6 sm:mt-8 lg:mt-9 xl:mt-10 text-center"
-                                          data-anime="onview: -200; translateY: [24, 0]; opacity: [0, 1]; delay: 200;">
-                                          <div class="row child-cols-6 sm:child-cols-4 justify-center gx-0 gy-2">
-                                                <div class="col sm:col-4 order-1 sm:order-0">
-                                                      <h2 style="color: #E31E23; font-family: aeonik !important;"
-                                                            class="counter-container h2 sm:h1 xl:display-6 mb-1 xl:mb-2">
-                                                            <span data-count="27"></span>+
-                                                      </h2>
-                                                      <span style="font-family: aeonik; font-weight: bold;"
-                                                            class="fs-6 sm:fs-5 xl:fs-4">Experience</span>
-                                                </div>
-                                                <div class="col sm:col-4 order-1 sm:order-0">
-                                                      <h2 style="color: #E31E23; font-family: aeonik !important;"
-                                                            class="counter-container h2 sm:h1 xl:display-6 mb-1 xl:mb-2">
-                                                            <span data-count="25"></span>+
-                                                      </h2>
-                                                      <span style="font-family: aeonik; font-weight: bold;"
-                                                            class="fs-6 sm:fs-5 xl:fs-4">Countries</span>
-                                                </div>
-                                                <div class="order-0">
-                                                      <h2 style="color: #E31E23; font-family: aeonik !important;"
-                                                            class="counter-container h2 sm:h1 xl:display-6 mb-1 xl:mb-2">
-                                                            <span data-count="100"></span>+
-                                                      </h2>
-                                                      <span style="font-family: aeonik; font-weight: bold;"
-                                                            class="fs-6 sm:fs-5 xl:fs-4">International clients</span>
-                                                </div>
-                                                <div class="order-0">
-                                                      <h2 style="color: #E31E23; font-family: aeonik !important;"
-                                                            class="counter-container h2 sm:h1 xl:display-6 mb-1 xl:mb-2">
-                                                            <span data-count="3000"></span>+
-                                                      </h2>
-                                                      <span style="font-family: aeonik; font-weight: bold;"
-                                                            class="fs-6 sm:fs-5 xl:fs-4">SKUs</span>
-                                                </div>
-                                          </div>
-                                    </div>
-                              </div>
-                        </div>
-                  </div>
-            </div>
-
-
-            <!-- Section start -->
-            <div id="roadmap" class="roadmap section panel overflow-hidden">
-                  <div style="background: linear-gradient(#F56DA9, #FBE3DF, rgb(193, 4, 11, 0.5), rgb(255, 255, 0), rgba(0, 255, 0, 0.86), rgb(0, 38, 161, 0.5), #FBE3DF);"
-                        class="section-outer panel py-6 sm:py-8 lg:py-9 xl:py-10">
-                        <img class="position-absolute end-0"
-                              src="https://html.reactheme.com/muchwow/assets/images/common/cloud-03.svg" alt="victor"
-                              style="top: 10%">
-                        <img class="position-absolute start-0 w-300px xl:w-auto"
-                              src="https://html.reactheme.com/muchwow/assets/images/common/cloud-04.svg" alt="victor"
-                              style="top: 39%">
-                        <img class="position-absolute end-0"
-                              src="https://html.reactheme.com/muchwow/assets/images/common/cloud-05.svg" alt="victor"
-                              style="bottom: 8%">
-                        <div class="container sm:max-w-lg xl:max-w-xl">
-                              <div class="section-inner panel">
-                                    <div id="bilgres-font"
-                                          class="panel sm:max-w-500px xl:max-w-800px mx-auto mb-4 sm:mb-6 xl:mb-9 text-center"
-                                          data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; delay: 200;">
-                                          <h2 style="font-family: sergio !important;"
-                                                class="h4 sm:h3 xl:h2 m-0 rotate-2 text-uppercase ls-0">History</h2>
-                                    </div>
-                                    <div class="section-content panel">
-                                          <img class="position-absolute start-50 top-50 translate-middle d-none lg:d-block"
-                                                src="https://html.reactheme.com/muchwow/assets/images/common/line.svg"
-                                                alt="victor" style="height: 90%">
-                                          <div
-                                                class="row child-cols-12 items-center g-4 sm:g-6 lg:gx-10 lg:gy-8 xl:gy-9">
-                                                <div class="sm:col-8 lg:col-6">
-                                                      <div class="roadmap-item panel"
-                                                            data-anime="onview: -300; translateY: [48, 0]; opacity: [0, 1]; delay: 200;">
-                                                            <div
-                                                                  class="px-4 py-6 xl:px-6 xl:py-8 border border-2 border-black contrast-shadow-md text-black bg-secondary-100 rotate-1">
-                                                                  <img src="../assets/images/products/Mission.webp"
-                                                                        alt="Product 3" class="w-full mb-3">
-                                                            </div>
-                                                      </div>
-                                                </div>
-                                                <div class="sm:col-4 lg:col-6 sm:d-block">
-                                                      <div class="panel">
-                                                            <h4 style="font-family: sergio !important;"
-                                                                  class="h5 xl:h4 m-0 text-black -rotate-2">Who we are
-                                                            </h4>
-                                                            <p style="font-family: aeonik;" class="fs-5 xl:fs-4 mt-2">
-                                                                  From humble beginnings as a gum manufacturer, Kamco has grown into a powerhouse of sweet possibilities. With 27
-                                                                  ultra-modern manufacturing units located in Indore, Madhya Pradesh – India’s cleanest city – we produce a wide array of
-                                                                  products across:
-                                                                  <br><br>
-                                                                  Bubblegum & Chewing Gum
-                                                                  <br>
-                                                                  Chocolates, Chocolate Beans & Choco Paste
-                                                                  <br>
-                                                                  Cakes, Wafer Rolls, Choco-Enrobed & Cream Wafers
-                                                                  <br>
-                                                                  Toffees, Lollipops, Candies, and Centre-Filled Biscuits
-                                                                  <br>
-                                                                  Surprise Toys, Khazana Items, Imli Paste, Jelly Cups & Soft Drink Powders
-                                                                  <br>
-                                                                  And even in-house gum base manufacturing
-                                                                  <br><br>
-                                                                  Every Kamco creation is made with precision, passion, and a deep understanding of what brings a smile to people’s faces.
-
-                                                            </p>
-                                                            <img id="center-el"
-                                                                  class="position-absolute d-none xl:d-block"
-                                                                  src="../assets/images/kamco-logo-version1.svg"
-                                                                  width="55" alt="victor"
-                                                                  style="top: 130px; left: -16.5%">
-                                                            <!-- <img class="position-absolute top-0 w-40px d-none lg:d-block xl:d-none" src="../assets/images/kamco-logo-version1.svg" width="45" alt="victor" style="left: -19.5%"> -->
-                                                      </div>
-                                                </div>
-                                                <div id="journey-left-section">
-                                                      <div class="sm:col-4 lg:col-6 sm:d-block">
-                                                            <div class="panel">
-                                                                  <h4 style="font-family: sergio !important;"
-                                                                        class="h5 xl:h4 m-0 text-black rotate-2">Our Global Footprint
-                                                                  </h4>
-                                                                  <p style="font-family: aeonik;" class="fs-5 xl:fs-4">
-                                                                        <br>
-                                                                        Kamco has proudly taken Indian confectionery to the world. We export to over 30+ countries, including:
-                                                                        <br><br>
-                                                                        🌍 UAE, Saudi Arabia, and the entire GCC
-                                                                        <br>
-                                                                        🌍 USA and Canada (including Walmart stores)
-                                                                        <br>
-                                                                        🌍 Australia and New Zealand
-                                                                        <br>
-                                                                        🌍 West & East Africa, South America, Nepal, Lebanon, Cambodia
-                                                                        <br><br>
-                                                                        …and more — bringing our irresistible flavors to every corner of the globe.
-                                                                  </p>
-                                                                  <!-- <img class="position-absolute top-0 d-none xl:d-block" src="../assets/images/kamco-logo-version1.svg" width="45" alt="victor" style="right: -15.5%"> -->
-                                                                  <!-- <img class="position-absolute top-0 w-40px d-none lg:d-block xl:d-none" src="../assets/images/kamco-logo-version1.svg" width="45" alt="victor" style="right: -19.5%"> -->
-                                                            </div>
-                                                      </div>
-                                                      <div class="sm:col-8 lg:col-6">
-                                                            <div class="roadmap-item panel"
-                                                                  data-anime="onview: -300; translateY: [48, 0]; opacity: [0, 1]; delay: 200;">
-                                                                  <div
-                                                                        class="px-4 py-6 xl:px-6 xl:py-8 border border-2 border-black contrast-shadow-md text-black bg-secondary-100 rotate-1">
-                                                                        <img src="../assets/images/kamco-store.webp"
-                                                                              alt="Product 3" class="w-full mb-3">
-                                                                  </div>
-                                                            </div>
-                                                      </div>
-                                                </div>
-                                                <div class="sm:col-8 lg:col-6">
-                                                      <div class="roadmap-item panel"
-                                                            data-anime="onview: -300; translateY: [48, 0]; opacity: [0, 1]; delay: 200;">
-                                                            <div
-                                                                  class="px-4 py-6 xl:px-6 xl:py-8 border border-2 border-black contrast-shadow-md text-black bg-secondary-100 rotate-1">
-                                                                  <img src="../assets/images/products/feel-the-crunch.webp" alt="Product 3"
-                                                                        class="w-full mb-3">
-                                                            </div>
-                                                      </div>
-                                                </div>
-                                                <div class="sm:col-4 lg:col-6 sm:d-block">
-                                                      <div class="panel">
-                                                            <h4 style="font-family: sergio !important;"
-                                                                  class="h5 xl:h4 m-0 text-black -rotate-2">Our Bestsellers</h4>
-                                                            <p style="font-family: aeonik;" class="fs-5 xl:fs-4 mt-2">
-                                                                  Among our vast portfolio, a few stars shine extra bright:
-                                                                  <br><br>
-                                                                  Teddy Bear Centre-Filled Biscuits
-                                                                  <br>
-                                                                  Colorful Choco Beans – vibrant and addictive
-                                                                  <br>
-                                                                  Kamco Bubblegum & Gums – soft, flavorful, and iconic
-                                                                  <br>
-                                                                  Delightful cakes and wafer rolls
-                                                                  
-                                                            </p>
-                                                            <!-- <img class="position-absolute top-0 d-none xl:d-block" src="../assets/images/kamco-logo-version1.svg" width="45" alt="victor" style="left: -15.5%"> -->
-                                                            <!-- <img class="position-absolute top-0 w-40px d-none lg:d-block xl:d-none" src="../assets/images/kamco-logo-version1.svg" width="45" alt="victor" style="left: -19.5%"> -->
-                                                      </div>
-                                                      <div class="panel">
-                                                            <br>
-                                                            <h4 style="font-family: sergio !important;" class="h5 xl:h4 m-0 text-black -rotate-2">What Sets Us Apart</h4>
-                                                            <p style="font-family: aeonik;" class="fs-5 xl:fs-4 mt-2">
-                                                                  Over 3,000 SKUs of pure confectionery creativity
-                                                                  <br>
-                                                                  FDA-approved, hygienic, and certified facilities
-                                                                  <br>
-                                                                  Certified with FSSAI, ISO 22000:2018, ISO 9001:2015, HACCP, HALAL, and APEDA
-                                                                  <br>
-                                                                  Open to branded and private label (OEM) production
-                                                                  <br>
-                                                                  A commitment to innovation, sustainability, and customer delight
-                                                      
-                                                            </p>
-                                                            <!-- <img class="position-absolute top-0 d-none xl:d-block" src="../assets/images/kamco-logo-version1.svg" width="45" alt="victor" style="left: -15.5%"> -->
-                                                            <!-- <img class="position-absolute top-0 w-40px d-none lg:d-block xl:d-none" src="../assets/images/kamco-logo-version1.svg" width="45" alt="victor" style="left: -19.5%"> -->
-                                                      </div>
-                                                </div>
-                                                <div id="journey-left-section">
-                                                      <div class="sm:col-4 lg:col-6 sm:d-block">
-                                                            <div class="panel">
-                                                                  <h4 style="font-family: sergio !important;"
-                                                                        class="h5 xl:h4 m-0 text-black rotate-2 ">
-                                                                        Our Mission</h4>
-                                                                  <p style="font-family: aeonik;" class="fs-5 xl:fs-4 ">
-                                                                        We are dedicated to creating confections that are more than just products — they’re experiences. With an unwavering
-                                                                        commitment to quality and a drive to explore new flavors, textures, and formats, our mission is to sweeten lives, one
-                                                                        bite at a time.</p>
-                                                                  <!-- <img class="position-absolute top-0 d-none xl:d-block" src="../assets/images/kamco-logo-version1.svg" width="45" alt="victor" style="right: -15.5%"> -->
-                                                                  <!-- <img class="position-absolute top-0 w-40px d-none lg:d-block xl:d-none" src="../assets/images/kamco-logo-version1.svg" width="45" alt="victor" style="right: -19.5%"> -->
-                                                            </div>
-                                                            <div class="panel">
-                                                                  <h4 style="font-family: sergio !important;" class="h5 xl:h4 m-0 text-black rotate-2 ">
-                                                                        Our Vision</h4>
-                                                                  <p style="font-family: aeonik;" class="fs-5 xl:fs-4 ">
-                                                                        Kamco aims to become a globally recognized name synonymous with joy, celebration, and taste. Our vision includes:
-                                                                        <br>
-                                                                        Expanding to new markets
-                                                                        <br>
-                                                                        Embracing sustainable, eco-friendly practices
-                                                                        <br>
-                                                                        Fostering emotional connections through every product we craft</p>
-                                                                  <!-- <img class="position-absolute top-0 d-none xl:d-block" src="../assets/images/kamco-logo-version1.svg" width="45" alt="victor" style="right: -15.5%"> -->
-                                                                  <!-- <img class="position-absolute top-0 w-40px d-none lg:d-block xl:d-none" src="../assets/images/kamco-logo-version1.svg" width="45" alt="victor" style="right: -19.5%"> -->
-                                                            </div>
-                                                      </div>
-                                                      <div class="sm:col-8 lg:col-6">
-                                                            <div class="roadmap-item panel"
-                                                                  data-anime="onview: -300; translateY: [48, 0]; opacity: [0, 1]; delay: 200;">
-                                                                  <div
-                                                                        class="px-4 py-6 xl:px-6 xl:py-8 border border-2 border-black contrast-shadow-md text-black bg-secondary-100 rotate-1">
-                                                                        <img src="../assets/images/about/Best-Sellers.webp"
-                                                                              alt="Product 3" class="w-full mb-3">
-                                                                  </div>
-                                                            </div>
-                                                      </div>
-                                                      
-                                                </div>
-                                          </div>
-
-                                    </div>
-                              </div>
-                              <h2 class="journey-footer"
-                                    style="text-align: center; font-family: aeonik !important; margin-top: 60px;">Come, Join the Sweet Revolution
-                                    Whether you're a distributor, retailer, or customer with a sweet tooth, Kamco invites you to join us on our journey.
-                                    Because with Kamco, every moment becomes a little sweeter.</h2>
-                        </div>
-                  </div>
-            </div>
-
-            <!-- Section end -->
-
+          </div>
+        </div>
       </div>
 
-      <!-- Wrapper end -->
-
-      <!-- Footer start -->
-      <footer style="background-color: transparent" id="uc-footer" class="uc-footer panel overflow-hidden">
-            <div class="footer-outer">
-                  <div class="footer-cta panel py-6 sm:py-8 lg:py-9 xl:py-10">
-                        <div class="container sm:max-w-md">
-                              <div class="footer-inner panel vstack gap-2 sm:gap-4 xl:gap-7"
-                                    data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; delay: 200;">
-                                    <div class="panel text-center">
-                                          <h2 class="h4 sm:h3 xl:h2 m-0 -rotate-1 text-uppercase ls-0"
-                                                style="font-family: sergio !important;">
-                                                Get in touch <br class="d-none sm:d-block">
-                                                with us 📢
-                                          </h2>
-                                    </div>
-                                    <div class="social-media panel">
-                                          <ul class="nav-x justify-center gap-4 xl:gap-6">
-                                                <li>
-                                                      <a class="w-48px lg:w-56px xl:w-64px hover:-rotate-3"
-                                                            href="https://www.instagram.com/kamcochewfoods/?hl=en"><img
-                                                                  src="../assets/images/icons/instagram.webp"
-                                                                  alt="instagram"></a>
-                                                </li>
-                                                <li>
-                                                      <a class="w-48px lg:w-56px xl:w-64px hover:-rotate-3"
-                                                            href="https://www.facebook.com/p/Kamco-Chew-Foods-100063781970067"><img
-                                                                  src="../assets/images/icons/facebook.webp"
-                                                                  alt="facebook"></a>
-                                                </li>
-                                                <li>
-                                                      <a class="w-48px lg:w-56px xl:w-64px hover:-rotate-3"
-                                                            href="https://www.youtube.com/@kamcochewfoods2106"><img
-                                                                  src="../assets/images/icons/youtube.webp"
-                                                                  alt="youtube"></a>
-                                                </li>
-                                                <li>
-                                                      <a class="w-48px lg:w-56px xl:w-64px hover:-rotate-3"
-                                                            href="https://www.linkedin.com/company/kamco-chew-food-private-limited/"><img
-                                                                  src="../assets/images/icons/linkedin.webp"
-                                                                  alt="Linkedin"></a>
-                                                </li>
-                                          </ul>
-                                    </div>
-                              </div>
-                        </div>
+      <!-- Section start -->
+      <div id="roadmap" class="roadmap section panel overflow-hidden">
+        <div
+          style="
+            background: linear-gradient(
+              #f56da9,
+              #fbe3df,
+              rgb(193, 4, 11, 0.5),
+              rgb(255, 255, 0),
+              rgba(0, 255, 0, 0.86),
+              rgb(0, 38, 161, 0.5),
+              #fbe3df
+            );
+          "
+          class="section-outer panel py-6 sm:py-8 lg:py-9 xl:py-10"
+        >
+          <img
+            class="position-absolute end-0"
+            src="https://html.reactheme.com/muchwow/assets/images/common/cloud-03.svg"
+            alt="victor"
+            style="top: 10%"
+          />
+          <img
+            class="position-absolute start-0 w-300px xl:w-auto"
+            src="https://html.reactheme.com/muchwow/assets/images/common/cloud-04.svg"
+            alt="victor"
+            style="top: 39%"
+          />
+          <img
+            class="position-absolute end-0"
+            src="https://html.reactheme.com/muchwow/assets/images/common/cloud-05.svg"
+            alt="victor"
+            style="bottom: 8%"
+          />
+          <div class="container sm:max-w-lg xl:max-w-xl">
+            <div class="section-inner panel">
+              <div
+                id="bilgres-font"
+                class="panel sm:max-w-500px xl:max-w-800px mx-auto mb-4 sm:mb-6 xl:mb-9 text-center"
+                data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; delay: 200;"
+              >
+                <h2
+                  style="font-family: sergio !important"
+                  class="h4 sm:h3 xl:h2 m-0 rotate-2 text-uppercase ls-0"
+                >
+                  History
+                </h2>
+              </div>
+              <div class="section-content panel">
+                <img
+                  class="position-absolute start-50 top-50 translate-middle d-none lg:d-block"
+                  src="https://html.reactheme.com/muchwow/assets/images/common/line.svg"
+                  alt="victor"
+                  style="height: 90%"
+                />
+                <div
+                  class="row child-cols-12 items-center g-4 sm:g-6 lg:gx-10 lg:gy-8 xl:gy-9"
+                >
+                  <div class="sm:col-8 lg:col-6">
+                    <div
+                      class="roadmap-item panel"
+                      data-anime="onview: -300; translateY: [48, 0]; opacity: [0, 1]; delay: 200;"
+                    >
+                      <div
+                        class="px-4 py-6 xl:px-6 xl:py-8 border border-2 border-black contrast-shadow-md text-black bg-secondary-100 rotate-1"
+                      >
+                        <img
+                          src="../assets/images/products/Mission.webp"
+                          alt="Product 3"
+                          class="w-full mb-3"
+                        />
+                      </div>
+                    </div>
                   </div>
-                  <div class="footer-content panel text-black" style="margin-top: -1px;">
-                        <img class="position-absolute bottom-0 right-0 w-100" style="background: white;"
-                              src="../assets/images/bg/img1.webp" alt="Image">
-                        <div style="padding: 20px;" class="container">
-                              <div
-                                    class="footer-inner panel vstack lg:hstack gap-4 justify-between fs-5 xl:fs-4 text-center py-2 lg:py-4">
-                                    <p style="font-family: aeonik !important; color: white;">Kamco Chew Foods © 2025,
-                                          All rights reserved.</p>
-                              </div>
-                        </div>
+                  <div class="sm:col-4 lg:col-6 sm:d-block">
+                    <div class="panel">
+                      <h4
+                        style="font-family: sergio !important"
+                        class="h5 xl:h4 m-0 text-black -rotate-2"
+                      >
+                        Who we are
+                      </h4>
+                      <p style="font-family: aeonik" class="fs-5 xl:fs-4 mt-2">
+                        From humble beginnings as a gum manufacturer, Kamco has
+                        grown into a powerhouse of sweet possibilities. With 27
+                        ultra-modern manufacturing units located in Indore,
+                        Madhya Pradesh – India’s cleanest city – we produce a
+                        wide array of products across:
+                        <br /><br />
+                        Bubblegum & Chewing Gum
+                        <br />
+                        Chocolates, Chocolate Beans & Choco Paste
+                        <br />
+                        Cakes, Wafer Rolls, Choco-Enrobed & Cream Wafers
+                        <br />
+                        Toffees, Lollipops, Candies, and Centre-Filled Biscuits
+                        <br />
+                        Surprise Toys, Khazana Items, Imli Paste, Jelly Cups &
+                        Soft Drink Powders
+                        <br />
+                        And even in-house gum base manufacturing
+                        <br /><br />
+                        Every Kamco creation is made with precision, passion,
+                        and a deep understanding of what brings a smile to
+                        people’s faces.
+                      </p>
+                      <img
+                        id="center-el"
+                        class="position-absolute d-none xl:d-block"
+                        src="../assets/images/kamco-logo-version1.svg"
+                        width="55"
+                        alt="victor"
+                        style="top: 130px; left: -16.5%"
+                      />
+                    </div>
                   </div>
+                  <div id="journey-left-section">
+                    <div class="sm:col-4 lg:col-6 sm:d-block">
+                      <div class="panel">
+                        <h4
+                          style="font-family: sergio !important"
+                          class="h5 xl:h4 m-0 text-black rotate-2"
+                        >
+                          Our Global Footprint
+                        </h4>
+                        <p style="font-family: aeonik" class="fs-5 xl:fs-4">
+                          <br />
+                          Kamco has proudly taken Indian confectionery to the
+                          world. We export to over 30+ countries, including:
+                          <br /><br />
+                          🌍 UAE, Saudi Arabia, and the entire GCC
+                          <br />
+                          🌍 USA and Canada (including Walmart stores)
+                          <br />
+                          🌍 Australia and New Zealand
+                          <br />
+                          🌍 West & East Africa, South America, Nepal, Lebanon,
+                          Cambodia
+                          <br /><br />
+                          …and more — bringing our irresistible flavors to every
+                          corner of the globe.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="sm:col-8 lg:col-6">
+                      <div
+                        class="roadmap-item panel"
+                        data-anime="onview: -300; translateY: [48, 0]; opacity: [0, 1]; delay: 200;"
+                      >
+                        <div
+                          class="px-4 py-6 xl:px-6 xl:py-8 border border-2 border-black contrast-shadow-md text-black bg-secondary-100 rotate-1"
+                        >
+                          <img
+                            src="../assets/images/kamco-store.webp"
+                            alt="Product 3"
+                            class="w-full mb-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sm:col-8 lg:col-6">
+                    <div
+                      class="roadmap-item panel"
+                      data-anime="onview: -300; translateY: [48, 0]; opacity: [0, 1]; delay: 200;"
+                    >
+                      <div
+                        class="px-4 py-6 xl:px-6 xl:py-8 border border-2 border-black contrast-shadow-md text-black bg-secondary-100 rotate-1"
+                      >
+                        <img
+                          src="../assets/images/products/feel-the-crunch.webp"
+                          alt="Product 3"
+                          class="w-full mb-3"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sm:col-4 lg:col-6 sm:d-block">
+                    <div class="panel">
+                      <h4
+                        style="font-family: sergio !important"
+                        class="h5 xl:h4 m-0 text-black -rotate-2"
+                      >
+                        Our Bestsellers
+                      </h4>
+                      <p style="font-family: aeonik" class="fs-5 xl:fs-4 mt-2">
+                        Among our vast portfolio, a few stars shine extra
+                        bright:
+                        <br /><br />
+                        Teddy Bear Centre-Filled Biscuits
+                        <br />
+                        Colorful Choco Beans – vibrant and addictive
+                        <br />
+                        Kamco Bubblegum & Gums – soft, flavorful, and iconic
+                        <br />
+                        Delightful cakes and wafer rolls
+                      </p>
+                    </div>
+                    <div class="panel">
+                      <br />
+                      <h4
+                        style="font-family: sergio !important"
+                        class="h5 xl:h4 m-0 text-black -rotate-2"
+                      >
+                        What Sets Us Apart
+                      </h4>
+                      <p style="font-family: aeonik" class="fs-5 xl:fs-4 mt-2">
+                        Over 3,000 SKUs of pure confectionery creativity
+                        <br />
+                        FDA-approved, hygienic, and certified facilities
+                        <br />
+                        Certified with FSSAI, ISO 22000:2018, ISO 9001:2015,
+                        HACCP, HALAL, and APEDA
+                        <br />
+                        Open to branded and private label (OEM) production
+                        <br />
+                        A commitment to innovation, sustainability, and customer
+                        delight
+                      </p>
+                    </div>
+                  </div>
+                  <div id="journey-left-section">
+                    <div class="sm:col-4 lg:col-6 sm:d-block">
+                      <div class="panel">
+                        <h4
+                          style="font-family: sergio !important"
+                          class="h5 xl:h4 m-0 text-black rotate-2"
+                        >
+                          Our Mission
+                        </h4>
+                        <p style="font-family: aeonik" class="fs-5 xl:fs-4">
+                          We are dedicated to creating confections that are more
+                          than just products — they’re experiences. With an
+                          unwavering commitment to quality and a drive to
+                          explore new flavors, textures, and formats, our
+                          mission is to sweeten lives, one bite at a time.
+                        </p>
+                        <!-- <img class="position-absolute top-0 d-none xl:d-block" src="../assets/images/kamco-logo-version1.svg" width="45" alt="victor" style="right: -15.5%"> -->
+                        <!-- <img class="position-absolute top-0 w-40px d-none lg:d-block xl:d-none" src="../assets/images/kamco-logo-version1.svg" width="45" alt="victor" style="right: -19.5%"> -->
+                      </div>
+                      <div class="panel">
+                        <h4
+                          style="font-family: sergio !important"
+                          class="h5 xl:h4 m-0 text-black rotate-2"
+                        >
+                          Our Vision
+                        </h4>
+                        <p style="font-family: aeonik" class="fs-5 xl:fs-4">
+                          Kamco aims to become a globally recognized name
+                          synonymous with joy, celebration, and taste. Our
+                          vision includes:
+                          <br />
+                          Expanding to new markets
+                          <br />
+                          Embracing sustainable, eco-friendly practices
+                          <br />
+                          Fostering emotional connections through every product
+                          we craft
+                        </p>
+                      </div>
+                    </div>
+                    <div class="sm:col-8 lg:col-6">
+                      <div
+                        class="roadmap-item panel"
+                        data-anime="onview: -300; translateY: [48, 0]; opacity: [0, 1]; delay: 200;"
+                      >
+                        <div
+                          class="px-4 py-6 xl:px-6 xl:py-8 border border-2 border-black contrast-shadow-md text-black bg-secondary-100 rotate-1"
+                        >
+                          <img
+                            src="../assets/images/about/Best-Sellers.webp"
+                            alt="Product 3"
+                            class="w-full mb-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-      </footer>
+            <h2
+              class="journey-footer"
+              style="
+                text-align: center;
+                font-family: aeonik !important;
+                margin-top: 60px;
+              "
+            >
+              Come, Join the Sweet Revolution Whether you're a distributor,
+              retailer, or customer with a sweet tooth, Kamco invites you to
+              join us on our journey. Because with Kamco, every moment becomes
+              a little sweeter.
+            </h2>
+          </div>
+        </div>
+      </div>
 
-      <!-- Footer end -->
+      <!-- Section end -->
+    </div>
 
-      <!-- include jquery & bootstrap js -->
-      <script defer src="../assets/js/libs/jquery.min.js"></script>
-      <script defer src="../assets/js/libs/bootstrap.min.js"></script>
+    <!-- Wrapper end -->
 
-      <!-- include scripts -->
-      <script defer src="../assets/js/libs/anime.min.js"></script>
-      <script defer src="../assets/js/libs/swiper-bundle.min.js"></script>
-      <script defer src="../assets/js/libs/scrollmagic.min.js"></script>
-      <script defer src="../assets/js/libs/typed.min.js"></script>
-      <script defer src="../assets/js/libs/tilt.min.js"></script>
-      <script defer src="../assets/js/libs/split-type.min.js"></script>
-      <script defer src="../assets/js/libs/prettify.min.js"></script>
-      <script defer src="../assets/js/libs/gsap.min.js"></script>
-      <script defer src="../assets/js/core/magic-cursor.js"></script>
-      <script defer src="../assets/js/helpers/data-attr-helper.js"></script>
-      <script defer src="../assets/js/helpers/swiper-helper.js"></script>
-      <script defer src="../assets/js/helpers/splitype-helper.js"></script>
-      <script defer src="../assets/js/helpers/anime-helper.js"></script>
-      <script defer src="../assets/js/helpers/typed-helper.js"></script>
-      <script defer src="../assets/js/helpers/tilt-helper.js"></script>
-      <script defer src="../assets/js/core/marquee.js"></script>
-      <script defer src="../assets/js/uikit-components-bs.js"></script>
+    <!-- Footer start -->
+    <footer
+      style="background-color: transparent"
+      id="uc-footer"
+      class="uc-footer panel overflow-hidden"
+    >
+      <div class="footer-outer">
+        <div class="footer-cta panel py-6 sm:py-8 lg:py-9 xl:py-10">
+          <div class="container sm:max-w-md">
+            <div
+              class="footer-inner panel vstack gap-2 sm:gap-4 xl:gap-7"
+              data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; delay: 200;"
+            >
+              <div class="panel text-center">
+                <h2
+                  class="h4 sm:h3 xl:h2 m-0 -rotate-1 text-uppercase ls-0"
+                  style="font-family: sergio !important"
+                >
+                  Get in touch <br class="d-none sm:d-block" />
+                  with us 📢
+                </h2>
+              </div>
+              <div class="social-media panel">
+                <ul class="nav-x justify-center gap-4 xl:gap-6">
+                  <li>
+                    <a
+                      class="w-48px lg:w-56px xl:w-64px hover:-rotate-3"
+                      href="https://www.instagram.com/kamcochewfoods/?hl=en"
+                      ><img
+                        src="../assets/images/icons/instagram.webp"
+                        alt="instagram"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      class="w-48px lg:w-56px xl:w-64px hover:-rotate-3"
+                      href="https://www.facebook.com/p/Kamco-Chew-Foods-100063781970067"
+                      ><img
+                        src="../assets/images/icons/facebook.webp"
+                        alt="facebook"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      class="w-48px lg:w-56px xl:w-64px hover:-rotate-3"
+                      href="https://www.youtube.com/@kamcochewfoods2106"
+                      ><img
+                        src="../assets/images/icons/youtube.webp"
+                        alt="youtube"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      class="w-48px lg:w-56px xl:w-64px hover:-rotate-3"
+                      href="https://www.linkedin.com/company/kamco-chew-food-private-limited/"
+                      ><img
+                        src="../assets/images/icons/linkedin.webp"
+                        alt="Linkedin"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-content panel text-black" style="margin-top: -1px">
+          <img
+            class="position-absolute bottom-0 right-0 w-100"
+            style="background: white"
+            src="../assets/images/bg/img1.webp"
+            alt="Image"
+          />
+          <div style="padding: 20px" class="container">
+            <div
+              class="footer-inner panel vstack lg:hstack gap-4 justify-between fs-5 xl:fs-4 text-center py-2 lg:py-4"
+            >
+              <p style="font-family: aeonik !important; color: white">
+                Kamco Chew Foods © 2025, All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-      <!-- CDNs -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-            integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Footer end -->
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-            integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- include jquery & bootstrap js -->
+    <script defer src="../assets/js/libs/jquery.min.js"></script>
+    <script defer src="../assets/js/libs/bootstrap.min.js"></script>
 
-      <!-- include app script -->
-      <script defer src="../assets/js/app.js"></script>
-      <script defer src="../assets/js/script.js"></script>
-      <script defer src="../assets/js/features.js"></script>
-      <script defer src="../assets/js/gsap.js"></script>
-      <script src="dropdown.js"></script>
+    <!-- include scripts -->
+    <script defer src="../assets/js/libs/anime.min.js"></script>
+    <script defer src="../assets/js/libs/swiper-bundle.min.js"></script>
+    <script defer src="../assets/js/libs/scrollmagic.min.js"></script>
+    <script defer src="../assets/js/libs/typed.min.js"></script>
+    <script defer src="../assets/js/libs/tilt.min.js"></script>
+    <script defer src="../assets/js/libs/split-type.min.js"></script>
+    <script defer src="../assets/js/libs/prettify.min.js"></script>
+    <script defer src="../assets/js/libs/gsap.min.js"></script>
+    <script defer src="../assets/js/core/magic-cursor.js"></script>
+    <script defer src="../assets/js/helpers/data-attr-helper.js"></script>
+    <script defer src="../assets/js/helpers/swiper-helper.js"></script>
+    <script defer src="../assets/js/helpers/splitype-helper.js"></script>
+    <script defer src="../assets/js/helpers/anime-helper.js"></script>
+    <script defer src="../assets/js/helpers/typed-helper.js"></script>
+    <script defer src="../assets/js/helpers/tilt-helper.js"></script>
+    <script defer src="../assets/js/core/marquee.js"></script>
+    <script defer src="../assets/js/uikit-components-bs.js"></script>
 
-      <script>
-            // Schema toggle via URL
-            const queryString = window.location.search;
-            const urlParams = new URLSearchParams(queryString);
-            const getSchema = urlParams.get("schema");
-            if (getSchema === "dark") {
-                  setDarkMode(1);
-            } else if (getSchema === "light") {
-                  setDarkMode(0);
-            }
-      </script>
-</body>
+    <!-- CDNs -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- include app script -->
+    <script defer src="../assets/js/app.js"></script>
+    <script defer src="../assets/js/script.js"></script>
+    <script defer src="../assets/js/features.js"></script>
+    <script defer src="../assets/js/gsap.js"></script>
+    <script src="../assets/js/dropdown.js"></script>
+
+    <script>
+      // Schema toggle via URL
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const getSchema = urlParams.get("schema");
+      if (getSchema === "dark") {
+        setDarkMode(1);
+      } else if (getSchema === "light") {
+        setDarkMode(0);
+      }
+    </script>
+  </body>
 </html>

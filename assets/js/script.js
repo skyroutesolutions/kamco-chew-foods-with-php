@@ -1,15 +1,5 @@
 const loadingIframe = document.querySelector("#Hero-Banner-Full iframe");
 
-// if (loadingIframe.complete) {
-//   onImageLoaded();
-// } else {
-//   loadingIframe.addEventListener('load', onImageLoaded);
-// }
-
-// function onImageLoaded() {
-//   document.querySelector('#loader-animation').style.display = 'none';
-// }
-
 loadingIframe?.addEventListener("load", () => {
   document.querySelector("#loader-animation")?.classList.add("hidden");
 });
@@ -48,10 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (scrollAmount >= container.scrollWidth - container.clientWidth) {
         scrollAmount = 0;
       }
-      // container.scrollTo({
-      //     left: scrollAmount,
-      //     behavior: "smooth"
-      // });
 
       container.style.scrollBehavior = "smooth";
       container.style.left = `${-scrollAmount}px`;
